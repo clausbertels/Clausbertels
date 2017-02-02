@@ -12,4 +12,6 @@
     <div class="chap" <?php if ($current=="thoughts") echo " id=\"current\""; ?>>
         <a href="/thoughts">Thoughts</a>
     </div>
+    
+    <?php include("menu.php"); ?>
 </div>
