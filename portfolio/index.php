@@ -15,14 +15,14 @@
     <?php include("../globmenu.php"); ?>
     
     <div class="cont">
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
-        <div class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></div>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
+        <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
     </div>
 
 </body>

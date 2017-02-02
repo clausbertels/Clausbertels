@@ -28,6 +28,7 @@ h1 {
 }
 
 .side {
+/*    background: lightblue;*/
     min-width: 230px;
     display: flex;
 }
@@ -43,6 +44,7 @@ h1 {
 }
 
 .cont {
+/*    background: lightyellow;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -54,7 +56,7 @@ h1 {
 }
 
 /************************************* MOBILE SPECIFIC*/
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px)*/
     
     body {
         padding: 10px;
@@ -67,7 +69,6 @@ h1 {
         justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 500px;
         margin: 0 0 10px 0;
     }
     
@@ -88,8 +89,6 @@ h1 {
     .preview { 
         height: 150px;
     }
-    
-}
 
 /************************************* DESKTOP SPECIFIC*/
 @media only screen and (min-width: 768px) {
@@ -97,15 +96,25 @@ h1 {
         padding: 50px 10px;
         flex-direction: row;
         justify-content: center;
+        align-content: center;
+        align-items: flex-start;
     }
     
     .side {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin: 0 3vw 0 0;
+        max-width: 230px;
+    }
+    
+    h1 {
+        text-align: left;
     }
     
     .preview {
         width: calc(100%/3);
+        height: auto;
     }
     
     .preview:before {
@@ -115,8 +124,8 @@ h1 {
     }
     
     .cont {
-        width: 900px;
-        max-width: 900px;
+        width: 100%;
+        max-width: 700px;
         flex-direction: row;
     }
 }
