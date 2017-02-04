@@ -18,5 +18,4 @@
         <li><a href="/thoughts">Thoughts</a></li>
     </ul>
 </body>
-<!--    Dit is een comment om commits te testen-->
 </html>

@@ -5,46 +5,78 @@
 }
 
 body {
-    font-family: "source-serif-pro", serif; 
+    font-family: "adelle"; 
     color: black;
     margin: 0; 
     display: flex;
+/*    Mobile-specific*/
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
 }
 
 p {
     margin: 0 0 1.1em 0; padding: 0;
 }
 
-a, a:hover, a:active {
-    text-decoration: none;
-}
-
 h1 {
-    margin: 0 0 10px 0; padding: 0;
+    margin: 0; padding: 0;
+    font-family: "museo-slab";
     font-size: 24pt;
-    font-weight: 300;
+    font-weight: 100;
     width: 100%;
     color: #a13e3e;
 }
 
 .side {
-/*    background: lightblue;*/
     min-width: 230px;
     display: flex;
+/*    Mobile-specific*/
+    flex-direction: row;
+/*    justify-content: space-between;*/
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
 }
 
-.chap, .chap a, .chap a:visited {
-    color: #555;
-    padding: 5px 0;
+a {
+    text-decoration: none;
+    outline: none;
 }
 
-#current a {
-    font-weight: 700;
+a:link {
+    color: #777;
+}
+
+a:visited {
+    color: #777;
+}
+
+/*a:focus {}*/
+
+a:hover, a:visited:hover {
     color: black;
 }
 
+a:active, a:hover:active {
+    color: #a13e3e;
+}
+
+a#current {
+    font-weight: bold;
+    color: black;
+}
+
+ul {
+    width: 100%;
+}
+
+ul, li {
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+
 .cont {
-/*    background: lightyellow;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -55,45 +87,43 @@ h1 {
     background-size: cover;
 }
 
-/************************************* MOBILE SPECIFIC*/
-/*@media only screen and (max-width: 768px)*/
-    
-    body {
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
+
+
+
+h1, .chap {
+    text-align: center;
+}
+
+.chap {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.localmenu, .globalmenu {
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cont {
+    width: 100%;
+    flex-direction: column;
+}
+
+.preview { 
+    height: 170px;
+}
+
+@media only screen and (max-width: 768px) {
+    .localmenu > li > ul {   /*first indentation of local menu*/
+        display: none;
     }
-    
-    .side {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0 0 10px 0;
-    }
-    
-    h1, .chap, #current {
-        text-align: center;
-    }
-    
-    .chap {
-        flex-grow: 1;
-        margin: 0;
-    }
-    
-    .cont {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .preview { 
-        height: 150px;
-    }
+}
 
 /************************************* DESKTOP SPECIFIC*/
 @media only screen and (min-width: 768px) {
     body {
-        padding: 50px 10px;
+        padding: 70px 10px;
         flex-direction: row;
         justify-content: center;
         align-content: center;
@@ -112,6 +142,16 @@ h1 {
         text-align: left;
     }
     
+    .localmenu, .globalmenu {
+        flex-direction: column;
+    }
+    
+    .cont {
+        width: 100%;
+        max-width: 700px;
+        flex-direction: row;
+    }
+    
     .preview {
         width: calc(100%/3);
         height: auto;
@@ -122,10 +162,5 @@ h1 {
         display: inherit;
         padding-top: 100%;
     }
-    
-    .cont {
-        width: 100%;
-        max-width: 700px;
-        flex-direction: row;
-    }
+
 }
