@@ -8,15 +8,22 @@
     <!--    Global styles-->
     <link rel="stylesheet" href="/styles.css" />
     
+    <!--    Local styles-->
+    <link rel="stylesheet" href="localstyles.css" />
+    
     <!--    Adobe Typekit-->
     <script src="https://use.typekit.net/gye7ujw.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
     
 <body>
-    <?php include("../globmenu.php"); ?>
+    <header>
+        <?php include("../images/logo.svg"); ?>
+    </header>
     
-    <div class="cont">
+    <?php include("../navigation.php"); ?>
+    
+    <main class="imagebox">
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
@@ -25,6 +32,6 @@
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
         <a href="#" class="preview" style="background-image: url('http://www.1001gedichten.nl/photos/0/284.jpg')"></a>
-    </div>
+    </main>
 </body>
 </html>
