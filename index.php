@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
-    <title>Claus Bertels</title>
-    <link rel="stylesheet" href="" />
-    
-    <!--    Adobe Typekit-->
-    <script src="https://use.typekit.net/gye7ujw.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-    
-<body>
-    <h1>Welcome!</h1>
-    <p>Lorem schmipsum</p>
-    <ul>
-        <li><a href="/CV/index">CV</a></li>
-        <li><a href="/portfolio/index">Portfolio</a></li>
-        <li><a href="/thoughts/index">Thoughts</a></li>
-    </ul>
-    
-    <details>
-        <summary>Click to open</summary>
-        <p>If your browser supports this element, it should allow you to expand and collapse these details.</p>
-    </details>
-</body>
-</html>
+<?php // @codingStandardsIgnoreFile
+
+// check PHP platform requirements
+if (PHP_VERSION_ID < 50306) {
+    die('Pico requires PHP 5.3.6 or above to run');
+}
+if (!extension_loaded('dom')) {
+    die('Pico requires the PHP extension "dom" to run');
+}
+if (!extension_loaded('mbstring')) {
+    die('Pico requires the PHP extension "mbstring" to run');
+}
+
+// load dependencies
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// instance Pico
+$pico = new Pico(
+    __DIR__,    // root dir
+    'config/',  // config dir
+    'plugins/', // plugins dir
+    'themes/'   // themes dir
+);
+
+// run application
+echo $pico->run();

@@ -1,0 +1,32 @@
+//////// TWIG
+
+{% for page in pages if page.title %}
+  <li{% if page.id == current_page.id %} class="active"{% endif %}>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </li>
+{% endfor %}
+
+//////// CSS
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button {
+    cursor: pointer;
+}
+
+
+
+/* Sharper Thumbnails */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+
+
+abbr, acronym {
+    cursor: help;
+    border-bottom: 0.1em dotted;
+}

@@ -1,0 +1,191 @@
+
+/*************************************** RESET STYLES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd,
+fieldset, form, label, legend, figure,
+table, span, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+span, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+label, input[type=button], input[type=submit], button {
+    cursor: pointer;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/*************************************** MAIN STYLES */
+body {
+  font: 16px Arial, sans-serif;
+  color: black;
+  background: #b2b2b2;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:visited {
+  color: #b2b2b2;
+  text-decoration: none;
+  -webkit-transition: all 0.12s ease;
+  -moz-transition: all 0.12s ease;
+  -ms-transition: all 0.12s ease;
+  -o-transition: all 0.12s ease;
+  transition: all 0.12s ease;
+}
+
+a:hover, a:active {
+  color: #000;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+abbr, acronym {
+    cursor: help;
+    border-bottom: 0.1em dotted;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+code {
+    font-family: Courier, "Courier New", Monaco, Tahoma;
+    background: #eee;
+    color: #333;
+    padding: 0px 2px;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+/*************************************** GRID STYLES */
+
+.background {
+  z-index: -1;
+  background: white;
+  height: 200vh;
+  width: 1440px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%)
+}
+
+.grid > * {
+  padding: 0 18px;
+  height: 87vh;
+}
+
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+/*************************************** NAVIGATION STYLES */
+#logo {
+  font: bold 3.5rem Georgia, serif;
+  margin: 3rem 0 2rem -5px;
+  letter-spacing: -.03em;
+}
+
+nav {
+  font-weight: bold;
+  /*position: fixed;*/
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+nav #main li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: Georgia, serif;
+  padding: .1em 0;
+}
+
+nav .sub li a {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: .5em 0;
+  /*background: linear-gradient(to bottom right, lightblue, darkblue);*/
+}
+
+nav .active {
+  color: black;
+  cursor: default;
+}
+
+/*************************************** PROJECT STYLES */
+
+.project {
+  color: white;
+  background-color: #333;
+  background-size: cover;
+  background-position: center center;
+}
+
+.project h1 {
+  font: normal 3.5rem Georgia, serif;
+  margin: 3rem 0 2rem 0;
+  letter-spacing: -.03em;
+}
+
+h1>span {
+  background: black;
+}
+
+section>span, details {
+  display: none;
+}
+
+.project > * {
+  opacity: .1;
+  transition: all .56s ease;
+}
+
+.project:hover>* {
+ opacity: 1;
+}

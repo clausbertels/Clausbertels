@@ -1,3 +1,0 @@
-<?php include("menu.php"); ?>
-
-use header, nav and main 
