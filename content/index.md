@@ -1,6 +1,7 @@
 ---
 Title: Welcome
 Description: Pico is a stupidly simple, blazing fast, flat file CMS. And in this description you can type whatever you like.
+coverimg: '/assets/boat.jpg'
 social:
     - title: Visit us on GitHub
       url: https://github.com/picocms/Pico

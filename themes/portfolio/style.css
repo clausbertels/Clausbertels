@@ -38,24 +38,21 @@ img {
 
 /*************************************** MAIN STYLES */
 body {
-  font: 16px Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: black;
-  background: #b2b2b2;
+  background: #eee;
   -webkit-font-smoothing: antialiased;
 }
 
 a, a:visited {
-  color: #b2b2b2;
+  color: black;
+  opacity: 0.3;
   text-decoration: none;
-  -webkit-transition: all 0.12s ease;
-  -moz-transition: all 0.12s ease;
-  -ms-transition: all 0.12s ease;
-  -o-transition: all 0.12s ease;
-  transition: all 0.12s ease;
+  transition: all 0.12s ease; */!PREFIXES!*/
 }
 
 a:hover, a:active {
-  color: #000;
+  opacity: 1;
 }
 
 b, strong {
@@ -125,7 +122,8 @@ p {
 #logo {
   font: bold 3.5rem Georgia, serif;
   margin: 3rem 0 2rem -5px;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
+  cursor: default;
 }
 
 nav {
@@ -150,42 +148,54 @@ nav .sub li a {
   display: inline-block;
   font-size: 1.2rem;
   padding: .5em 0;
-  /*background: linear-gradient(to bottom right, lightblue, darkblue);*/
 }
 
 nav .active {
-  color: black;
+  opacity: 1;
   cursor: default;
 }
 
 /*************************************** PROJECT STYLES */
 
 .project {
-  color: white;
+  color: black;
   background-color: #333;
-  background-size: cover;
-  background-position: center center;
+  background-size: auto 100%;
+  background-position: 50% 50%;
+  cursor: pointer;
+  vertical-align: bottom;
+  transition: background-size .13s ease-out;
 }
 
 .project h1 {
   font: normal 3.5rem Georgia, serif;
   margin: 3rem 0 2rem 0;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
 }
 
-h1>span {
-  background: black;
+.project h1>span {
+  background: white;
+  padding: 0 .16em 0 .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 section>span, details {
   display: none;
 }
 
-.project > * {
-  opacity: .1;
-  transition: all .56s ease;
-}
+.project>h1 {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all .13s ease-out; /*!PREFIXES!*/
+
+} /*NON-TOUCH DEVICES??*/
 
 .project:hover>* {
- opacity: 1;
+  opacity: 1;
+  filter: blur(0);
 }
+
+.project:hover {
+  background-size: auto 106%;
+}  /*SHOULD PRIORITIZE TRANSFORM-SCALE: NO MORE BACKGROUND IMAGES*/

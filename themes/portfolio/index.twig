@@ -26,11 +26,10 @@
 <div class="grid">
 
   <nav id="nav">
-    <!-- <img src="assets/logo.svg" id="logo" /> -->
     <h1 id="logo">Claus</h1>
 <!-- STATIC -->
     <ul id="main">
-      <li><a href="#">About me</a></li>
+      <li><a href="">About me</a></li>
       <li><a class="active">Portfolio<a/></li>
     </ul>
 <!-- USE PICO HERE %Cat -->
@@ -83,8 +82,8 @@
     </details>
   </section>
 
-  <section class="project" style="background-image: url('/assets/boat.jpg');">
-    <h1><span>%Title</span></h1>
+  <section class="project" style="background-image: url({{ meta.coverimg }});">
+    <h1><span>{{ meta.title }}</span></h1>
 
     <span>%Cat</span>
 
