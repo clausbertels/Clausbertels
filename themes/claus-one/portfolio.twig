@@ -67,7 +67,7 @@
   {% endfor %}
 
 <!-- TO DO: SORTEER OP DESCENDING DATE -->
-  {% if page.title == all %}
+  {% if current_page.title|lower == "all" %}
     {% for cat in categories %}
       {% for p in cat.pages if p.meta.position != 1 %}
         <section class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
