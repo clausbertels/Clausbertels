@@ -6,6 +6,9 @@
   </li>
 {% endfor %}
 
+{{ pages }} data array of all pages
+{{ current_page }} data array of current page ( use {{current_page.var}} )
+
 //////// CSS
 .grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
@@ -17,7 +20,8 @@ label, input[type=button], input[type=submit], button {
     cursor: pointer;
 }
 
-
+<IfModule mod_rewrite.c>
+</IfModule>
 
 /* Sharper Thumbnails */
 img {

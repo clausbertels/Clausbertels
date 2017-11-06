@@ -157,7 +157,7 @@ nav .active {
 .project {
   color: black;
   background-color: #333;
-  background-size: auto 100%;
+  background-size: auto 104%;
   background-position: 50% 50%;
   cursor: pointer;
   transition: background-size .08s ease-out;
@@ -167,6 +167,9 @@ nav .active {
   font: normal 3.5rem Georgia, serif;
   margin: 3rem 0 2rem 0;
   letter-spacing: -.02em;
+  position: -webkit-sticky;
+  position: sticky; /* STICKY IN GRID DOESN'T WORK IN CHROME */
+  top: 3rem;
 }
 
 .project h1>span {
@@ -180,18 +183,19 @@ section>span, details {
   display: none;
 }
 
-.project>h1 {
-  opacity: 0;
-  filter: blur(4px);
-  transition: all .14s ease-out; /*!PREFIXES!*/
+@media (hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
+  .project>h1 {
+    opacity: 0;
+    /*filter: blur(4px);*/ /* BETER NIE */
+    transition: all .14s ease-out; /*!PREFIXES!*/
+  }
 
-} /*NON-TOUCH DEVICES??*/
+  .project:hover>* {
+    opacity: 1;
+    /*filter: blur(0);*/
+  }
 
-.project:hover>* {
-  opacity: 1;
-  filter: blur(0);
+  .project:hover {
+    background-size: auto 100%;
+  }  /*SHOULD PRIORITIZE TRANSFORM-SCALE: NO MORE BACKGROUND IMAGES*/
 }
-
-.project:hover {
-  background-size: auto 104%;
-}  /*SHOULD PRIORITIZE TRANSFORM-SCALE: NO MORE BACKGROUND IMAGES*/

@@ -16,43 +16,45 @@
  * @version 1.0
  */
 
-/*
- * BASIC
- */
-$config['site_title'] = 'Claus Bertels';              // Site title
-// $config['base_url'] = 'claus.design';                    // Override base URL (e.g. http://example.com)
-// $config['rewrite_url'] = true;               // A boolean indicating forced URL rewriting
 
 /*
- * THEME
- */
-$config['theme'] = 'portfolio';                // Set the theme (defaults to "default")
-// $config['twig_config'] = array(              // Twig settings
-//     'cache' => false,                        // To enable Twig caching change this to a path to a writable directory
-//     'autoescape' => false,                   // Auto-escape Twig vars
-//     'debug' => false                         // Enable Twig debug
-// );
+BASIC */
+$config['site_title'] = 'Claus Bertels';
+//$config['base_url'] = 'claus.design'; // Override base URL (e.g. http://example.com)
+//$config['rewrite_url'] = true; // forced URL rewriting
+
 
 /*
- * CONTENT
- */
+THEME */
+$config['theme'] = 'claus-one';  // Set the theme (defaults to "default")
+$config['twig_config'] = array(              // Twig settings
+//     'cache' => false,  // To enable Twig caching change this to a path to a writable directory
+     'autoescape' => true,                   // Auto-escape Twig vars
+     //'debug' => false                         // Enable Twig debug
+);
+
+
+/*
+CONTENT */
 // $config['date_format'] = '%D %T';            // Set the PHP date format as described here: http://php.net/manual/en/function.strftime.php
 // $config['pages_order_by'] = 'alpha';         // Order pages by "alpha" or "date"
 // $config['pages_order'] = 'asc';              // Order pages "asc" or "desc"
 // $config['content_dir'] = 'content-sample/';  // Content directory
 // $config['content_ext'] = '.md';              // File extension of content files to serve
 
-/*
- * TIMEZONE
- */
-// $config['timezone'] = 'UTC';                 // Timezone may be required by your php install
 
 /*
- * PLUGINS
- */
-// $config['DummyPlugin.enabled'] = false;      // Force DummyPlugin to be disabled
+TIMEZONE */
+// $config['timezone'] = 'UTC';  // Timezone may be required by your php install
+
 
 /*
- * CUSTOM
- */
-// $config['custom_setting'] = 'Hello';         // Can be accessed by {{ config.custom_setting }} in a theme
+PLUGINS */
+$config['PicoCategorizedPages.enabled'] = true;
+
+/*
+CUSTOM Can be accessed by {{ config.custom_setting }} in a theme */
+// $config['custom_setting'] = 'Hello';
+$config['pages_order_by'] = 'position';             // Needed by PicoCategorizedPages
+$config['pages_order'] = 'desc';                 // Order pages "asc" or "desc"
+$config['categories_order'] = 'asc';              // Order categories "asc" or "desc"

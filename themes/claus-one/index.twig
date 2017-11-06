@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+
+  <title>
+    No Template
+  </title>
+</head>
+
+<body>
+    {{ pages|map("Title") }}
+
+  <br />
+
+  {{ content }}
+
+  <br />
+
+  <p>
+    {{ site_title }}<br />
+    {{ theme_dir }}<br />
+    <b>{{ current_page.id }} <br />The relative path to the content file (unique ID)</b><br />
+    <b>{{ meta.title }}</b>
+  </p>
+
+  {% for i in pages %}
+    <p>{{ i.id }} <br />The relative path to the content file (unique ID)</p>
+    <p>{{ i.url }} <br /> The URL to the page </p>
+    <p>{{ i.title }} <br /> The title of the page (YAML header) </p>
+    <p>{{ meta.title }} <br /> The title of the page (YAML header) </p>
+    <p>{{ i.description }} <br /> The description of the page (YAML header) </p>
+    <p>{{ i.author }} <br /> The author of the page (YAML header) </p>
+    <p>{{ i.time }} <br /> The timestamp derived from the Date header </p>
+    <p>{{ i.date }} <br /> The date of the page (YAML header) </p>
+    <p>{{ i.date_formatted }} <br /> The formatted date of the page </p>
+    <p>{{ current_page }}</p>
+    <hr />
+  {% endfor %}
+</body>
+
+</html>
