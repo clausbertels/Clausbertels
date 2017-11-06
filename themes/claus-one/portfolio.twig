@@ -61,7 +61,6 @@
     {% for p in cat.pages if p.meta.position != 1 %}              <!-- loop all pages except index -->
       <section class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
         <h1><span>{{p.title}}</span></h1>
-        <span>Category</span>
       </section>
     {% endfor %}
   {% endfor %}
@@ -72,7 +71,7 @@
       {% for p in cat.pages if p.meta.position != 1 %}
         <section class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
           <h1><span>{{p.title}}</span></h1>
-          <span>Category</span>
+          <h2><span>{{ p.meta.category }}</span></h2>
         </section>
       {% endfor %}
     {% endfor %}

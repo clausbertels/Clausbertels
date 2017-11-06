@@ -107,7 +107,7 @@ p {
 }
 
 .grid > * {
-  padding: 0 18px;
+  padding: 0 18px 18px 18px;
   height: 87vh;
 }
 
@@ -117,6 +117,13 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
+
+.project {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+}
+
 
 /*************************************** NAVIGATION STYLES */
 #logo {
@@ -155,7 +162,6 @@ nav .active {
 /*************************************** PROJECT STYLES */
 
 .project {
-  color: black;
   background-color: #333;
   background-size: auto 104%;
   background-position: 50% 50%;
@@ -165,11 +171,9 @@ nav .active {
 
 .project h1 {
   font: normal 3.5rem Georgia, serif;
+  color: black;
   margin: 3rem 0 2rem 0;
   letter-spacing: -.02em;
-  position: -webkit-sticky;
-  position: sticky; /* STICKY IN GRID DOESN'T WORK IN CHROME */
-  top: 3rem;
 }
 
 .project h1>span {
@@ -177,10 +181,21 @@ nav .active {
   padding: 0 .16em 0 .12em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  position: -webkit-sticky;
+  position: sticky; /* STICKY IN GRID DOESN'T WORK IN CHROME */
+  top: 3rem;
 }
 
-section>span, details {
-  display: none;
+.project h2 {
+  font: normal 1.35rem Arial, sans-serif;
+  color: white;
+}
+
+.project h2>span {
+  background: black;
+  padding: 0 .16em 0 .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 @media (hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
@@ -190,7 +205,7 @@ section>span, details {
     transition: all .14s ease-out; /*!PREFIXES!*/
   }
 
-  .project:hover>* {
+  .project:hover>h1 {
     opacity: 1;
     /*filter: blur(0);*/
   }
