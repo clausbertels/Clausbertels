@@ -1,5 +1,5 @@
 ---
-Template: portfolio
+Template: project
 Title: Hanglamp
 Category: DIY
 Position: 2

@@ -1,9 +1,9 @@
 ---
+Template: project
 Title: Cork Bowl
 Category: Renders
 Position: 2
 Coverimg: camera.jpg
-Template: portfolio
 ---
 
 ## This is a Sub Page Index

@@ -1,9 +1,9 @@
 ---
+Template: project
 Title: Galvanize
 Category: Renders
 Position: 3
 Coverimg: cello.jpg
-Template: portfolio
 ---
 
 ## This is a Sub Page

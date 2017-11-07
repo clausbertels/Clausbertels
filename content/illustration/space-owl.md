@@ -1,10 +1,10 @@
 ---
-Template: portfolio
+Template: project
 Title: Space Owl
+Position: 2
 Category: Illustration
-Position: 3
 Coverimg: girl.jpg
-Date: 2013/01/01
+Date: 05/01/2015
 ---
 
 ## This is a Sub Page Index

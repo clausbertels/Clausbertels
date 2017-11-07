@@ -29,14 +29,14 @@ THEME */
 $config['theme'] = 'claus-one';  // Set the theme (defaults to "default")
 $config['twig_config'] = array(              // Twig settings
 //     'cache' => false,  // To enable Twig caching change this to a path to a writable directory
-     'autoescape' => true,                   // Auto-escape Twig vars
+     'autoescape' => false,                   // Auto-escape Twig vars
      //'debug' => false                         // Enable Twig debug
 );
 
 
 /*
 CONTENT */
-// $config['date_format'] = '%D %T';            // Set the PHP date format as described here: http://php.net/manual/en/function.strftime.php
+$config['date_format'] = '%d/%m/%Y';            // http://php.net/manual/en/function.strftime.php
 $config['pages_order_by'] = 'date';         // Order pages by "alpha" or "date"
 $config['pages_order'] = 'desc';              // Order pages "asc" or "desc"
 // $config['content_dir'] = 'content-sample/';  // Content directory
@@ -55,7 +55,6 @@ $config['PicoCategorizedPages.enabled'] = true;
 /*
 CUSTOM Can be accessed by {{ config.custom_setting }} in a theme */
 // $config['custom_setting'] = 'Hello';
-$config['pages_order_by'] = 'position';             // Needed by PicoCategorizedPages
-$config['pages_order'] = 'desc';                 // Order pages "asc" or "desc"
+$config['catpages_order_by'] = 'date';             // Needed by PicoCategorizedPages
+$config['catpages_order'] = 'desc';                 // Order pages "asc" or "desc"
 $config['categories_order'] = 'asc';              // Order categories "asc" or "desc"
-$config['categories_directory']

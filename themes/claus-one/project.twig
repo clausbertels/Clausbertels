@@ -1,130 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta charset="utf-8" />
+  <meta charset="utf-8" />
 
-    <title>
-      {% if meta.title %}
-        {{ meta.title }} |
-        {% endif %}
-      {{ site_title }}
-    </title>
-
-    {% if meta.description %}
-        <meta name="description" content="{{ meta.description|striptags }}">
-    {% endif %}
-
-    {% if meta.robots %}
-        <meta name="robots" content="{{ meta.robots }}">
-    {% endif %}
-
-    <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
-    <script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
+  <title>
+    Project Template
+  </title>
 </head>
 
 <body>
-<div class="grid">
 
-  <nav id="nav">
-    <h1 id="logo">Claus</h1>
-<!-- STATIC -->
-    <ul id="main">
-      <li><a href="">About me</a></li>
-      <li><a class="active">Portfolio<a/></li>
-    </ul>
-<!-- USE PICO HERE %Cat -->
-    <ul class="sub">
-      <li><a href="" class="active">All</a></li>
-      <li><a href="">Product design</a></li>
-      <li><a href="">Illustration</a></li>
-      <li><a href="">Branding</a></li>
-      <li><a href="">Renders</a></li>
-      <li><a href="">DIY</a></li>
-    </ul>
-  </nav>
-
-<!-- USE PICO HERE %Coverimg %Title %Cat  -->
-  <section class="project" style="background-image: url('/assets/coast.jpg');">
-    <h1><span>Cork Bowl</span></h1>
-    <span>3D Render</span>
-    <details>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/blue.jpg');">
-    <h1><span>Horse on the Beach</span></h1>
-
-    <span>Just a photograph</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/shoe.jpg');">
-    <h1><span>Bubblegum Girl</h1>
-
-    <span>Another Category</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/camera.jpg');">
-    <h1><span>Smoothie-automaat</span></h1>
-
-    <span>Product Design</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url({{ meta.coverimg }});">
-    <h1><span>{{ meta.title }}</span></h1>
-
-    <span>%Cat</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/girl.jpg');">
-    <h1><span>%Title</span></h1>
-
-    <span>%Cat</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/leopard.jpg');">
-    <h1><span>%Title</span></h1>
-
-    <span>%Cat</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-  <section class="project" style="background-image: url('/assets/cello.jpg');">
-    <h1><span>%Title</span></h1>
-
-    <span>%Cat</span>
-
-    <details>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </details>
-  </section>
-
-</div> <!-- end grid wrapper -->
-
-<div class="background"></div>
+  <p>
+    {{ site_title }}<br />
+    {{ theme_dir }}<br />
+    {{ current_page.id }}<br />
+    {{ meta.title }}
+  </p>
+    <hr />
+  {{ content }}
 </body>
 
 </html>

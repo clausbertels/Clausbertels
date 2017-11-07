@@ -19,7 +19,6 @@
     {% endif %}
 
     <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
-    <script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
 </head>
 
 <body>
@@ -27,12 +26,12 @@
 
   <nav id="nav">
     <h1 id="logo">Claus</h1>
-<!-- STATIC -->
+
     <ul id="main">
       <li><a href="">About me</a></li>
       <li><a class="active">Portfolio<a/></li>
     </ul>
-<!-- ADD CLASS .ACTIVE CONDITIONAL -->
+
     <ul class="sub">
       <li>
         <a href="/portfolio" {% if meta.title|lower == "all" %} class="active" {% endif %}>All</a></li>
@@ -51,24 +50,24 @@
     </ul>
   </nav>
 
-
-  {% for cat in categories if cat.title == current_page.title %}  <!-- loop only current category -->
-    {% for p in cat.pages if p.meta.position != 1 %}              <!-- loop all pages except index -->
-      <a href="" class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
-        <h1><span>{{p.title}}</span></h1>
-      </a>
-    {% endfor %}
-  {% endfor %}
-
-<!-- TO DO: SORTEER OP DESCENDING DATE -->
-  {% if current_page.title|lower == "all" %}
-    {% for cat in categories %}
-      {% for p in cat.pages if p.meta.position != 1 %}
-        <a href="" class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
+  {% if current_page.title|lower != "all" %}
+    {% for cat in categories if cat.title == current_page.title %}  <!-- loop only current category -->
+      {% for p in cat.pages if not p.meta.category_title %}              <!-- loop all pages except index -->
+        <a href="{{p.url}}" class="project" style="background-image: url('/assets/{{cat.title|replace({' ':''})|lower}}/{{p.meta.coverimg}}');">
           <h1><span>{{p.title}}</span></h1>
-          <h2><span>{{ p.meta.category }}</span></h2>
         </a>
       {% endfor %}
+    {% endfor %}
+  {% else %}
+
+<!-- ALL (TO DO: SORTEER OP DESCENDING DATE) -->
+
+      {% for p in pages|sort_by("date") if not p.meta.category_title and p.meta.category %}
+        <a href="{{p.url}}" class="project" style="background-image: url('/assets/{{p.meta.category|replace({' ':''})|lower}}/{{p.meta.coverimg}}');">
+          <h1><span>{{p.title}}</span></h1>
+          <h2><span>{{ p.meta.category }} | {{ p.date }}</span></h2>
+        </a>
+
     {% endfor %}
   {% endif %}
 

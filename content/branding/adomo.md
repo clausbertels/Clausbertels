@@ -1,9 +1,9 @@
 ---
+Template: project
 Title: Adomo
 Category: Branding
 Position: 2
 Coverimg: smartphone.jpg
-Template: portfolio
 ---
 
 ## This is a Sub Page Index

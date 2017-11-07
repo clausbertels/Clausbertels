@@ -1,9 +1,9 @@
 ---
+Template: project
 Title: PO events
 Category: Branding
 Position: 3
 Coverimg: elephant.jpg
-Template: portfolio
 ---
 
 ## This is a Sub Page

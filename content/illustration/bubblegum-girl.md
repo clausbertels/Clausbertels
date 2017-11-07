@@ -1,10 +1,10 @@
 ---
-Template: portfolio
+Template: project
 Title: Bubblegum girl
+Position: 3
 Category: Illustration
-Position: 2
 Coverimg: coast.jpg
-Date: 2012/01/01
+Date: 04/01/2016
 ---
 
 ## This is a Sub Page

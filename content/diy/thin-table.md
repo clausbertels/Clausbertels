@@ -1,9 +1,9 @@
 ---
+Template: project
 Title: Thin Table
 Category: DIY
 Position: 3
 Coverimg: shoe.jpg
-Template: portfolio
 ---
 
 ## This is a Sub Page Index
