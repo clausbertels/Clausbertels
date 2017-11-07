@@ -35,12 +35,7 @@
 <!-- ADD CLASS .ACTIVE CONDITIONAL -->
     <ul class="sub">
       <li>
-        <a
-          href="/portfolio"
-          {% if meta.title|lower == "all" %}
-            class="active"
-          {% endif %}
-        >All</a></li>
+        <a href="/portfolio" {% if meta.title|lower == "all" %} class="active" {% endif %}>All</a></li>
       {% for cat in categories %}
         <li>
           <a
@@ -59,9 +54,9 @@
 
   {% for cat in categories if cat.title == current_page.title %}  <!-- loop only current category -->
     {% for p in cat.pages if p.meta.position != 1 %}              <!-- loop all pages except index -->
-      <section class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
+      <a href="" class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
         <h1><span>{{p.title}}</span></h1>
-      </section>
+      </a>
     {% endfor %}
   {% endfor %}
 
@@ -69,10 +64,10 @@
   {% if current_page.title|lower == "all" %}
     {% for cat in categories %}
       {% for p in cat.pages if p.meta.position != 1 %}
-        <section class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
+        <a href="" class="project" style="background-image: url('/assets/{{cat.title}}/{{p.meta.coverimg}}');">
           <h1><span>{{p.title}}</span></h1>
           <h2><span>{{ p.meta.category }}</span></h2>
-        </section>
+        </a>
       {% endfor %}
     {% endfor %}
   {% endif %}

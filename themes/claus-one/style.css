@@ -11,11 +11,11 @@ table, span, tbody, tfoot, thead, tr, th, td {
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 table {
@@ -42,17 +42,6 @@ body {
   color: black;
   background: #eee;
   -webkit-font-smoothing: antialiased;
-}
-
-a, a:visited {
-  color: black;
-  opacity: 0.3;
-  text-decoration: none;
-  transition: all 0.12s ease; */!PREFIXES!*/
-}
-
-a:hover, a:active {
-  opacity: 1;
 }
 
 b, strong {
@@ -99,11 +88,12 @@ p {
   z-index: -1;
   background: white;
   height: 200vh;
-  width: 1440px;
+  width: 1600px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%)
+  -webkit-transform:translate(-50%,-50%);
+          transform:translate(-50%,-50%);
 }
 
 .grid > * {
@@ -112,16 +102,16 @@ p {
 }
 
 .grid {
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  /*grid-gap: 1px;*/ /* To GAP OR NOT TO GAP? */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .project {
   display: grid;
   grid-template-rows: 1fr auto;
-  grid-template-columns: 1fr;
 }
 
 
@@ -154,7 +144,34 @@ nav .sub li a {
   padding: .5em 0;
 }
 
-nav .active {
+nav a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all 0.12s ease;
+  transition: all 0.12s ease;
+}
+
+nav a:link, nav a:visited {
+  opacity: 0.3;
+}
+
+nav a:visited {
+
+}
+
+nav a:focus {
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+nav a:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+nav a.active {
   opacity: 1;
   cursor: text;
 }
@@ -162,10 +179,11 @@ nav .active {
 /*************************************** PROJECT STYLES */
 
 .project {
+  text-decoration: none;
   background-color: #333;
   background-size: auto 104%;
   background-position: 50% 50%;
-  cursor: pointer;
+  -webkit-transition: background-size .08s ease-out;
   transition: background-size .08s ease-out;
 }
 
@@ -182,7 +200,7 @@ nav .active {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   position: -webkit-sticky;
-  position: sticky; /* STICKY IN GRID DOESN'T WORK IN CHROME */
+  position: sticky;
   top: 3rem;
 }
 
@@ -198,11 +216,13 @@ nav .active {
   box-decoration-break: clone;
 }
 
-@media (hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
+/* NOT WORKING IN FIREFOX? */
+@media (any-hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
   .project>h1 {
     opacity: 0;
     /*filter: blur(4px);*/ /* BETER NIE */
-    transition: all .14s ease-out; /*!PREFIXES!*/
+    -webkit-transition: all .14s ease-out;
+    transition: all .14s ease-out;
   }
 
   .project:hover>h1 {

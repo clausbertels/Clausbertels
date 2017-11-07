@@ -37,8 +37,8 @@ $config['twig_config'] = array(              // Twig settings
 /*
 CONTENT */
 // $config['date_format'] = '%D %T';            // Set the PHP date format as described here: http://php.net/manual/en/function.strftime.php
-// $config['pages_order_by'] = 'alpha';         // Order pages by "alpha" or "date"
-// $config['pages_order'] = 'asc';              // Order pages "asc" or "desc"
+$config['pages_order_by'] = 'date';         // Order pages by "alpha" or "date"
+$config['pages_order'] = 'desc';              // Order pages "asc" or "desc"
 // $config['content_dir'] = 'content-sample/';  // Content directory
 // $config['content_ext'] = '.md';              // File extension of content files to serve
 
@@ -58,3 +58,4 @@ CUSTOM Can be accessed by {{ config.custom_setting }} in a theme */
 $config['pages_order_by'] = 'position';             // Needed by PicoCategorizedPages
 $config['pages_order'] = 'desc';                 // Order pages "asc" or "desc"
 $config['categories_order'] = 'asc';              // Order categories "asc" or "desc"
+$config['categories_directory']
