@@ -6,6 +6,10 @@
   <title>
     Project Template
   </title>
+
+  <style type="text/css">
+    body {font-family: Arial, sans-serif;}
+  </style>
 </head>
 
 <body>
@@ -14,7 +18,8 @@
     {{ site_title }}<br />
     {{ theme_dir }}<br />
     {{ current_page.id }}<br />
-    {{ meta.title }}
+    {{ meta.title }}<br />
+    {{ meta.date_formatted }}
   </p>
     <hr />
   {{ content }}

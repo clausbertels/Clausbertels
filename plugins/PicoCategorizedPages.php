@@ -3,7 +3,7 @@
 /**
  * Plugin for categorized pages
  *
- * @author David Boulard, Claus Bertels
+ * @author David Boulard
  * @link https://github.com/arckauss/Pico-Categorized-Pages
  * @license http://opensource.org/licenses/MIT
  * @version 1.0.0
@@ -18,7 +18,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     protected $catpages_order_by;
     protected $categories_order;
 
-    public function onConfigLoaded(array & $config)
+    public function onConfigLoaded(array &$config)
     {
         $this->base_url = $this->getConfig('base_url');
         $this->catpages_order = $this->getConfig('catpages_order');
@@ -26,9 +26,9 @@ class PicoCategorizedPages extends AbstractPicoPlugin
         $this->categories_order = $this->getConfig('categories_order');
     }
 
-    public function onMetaHeaders(array & $headers)
+    public function onMetaHeaders(array &$headers)
     {
-       $headers['date'] = strtotime('Date');
+       $headers['position'] = 'Position';
        $headers['page_ignore'] = 'Page_Ignore';
        $headers['category_position'] = 'Category_Position';
        $headers['category_title'] = 'Category_Title';
@@ -36,12 +36,12 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     }
 
     public function onPagesLoaded(
-    array & $pages,
-    array & $currentPage = null,
-    array & $previousPage = null,
-    array & $nextPage = null
+    array &$pages,
+    array &$currentPage = null,
+    array &$previousPage = null,
+    array &$nextPage = null
     ) {
-        if($this->catpages_order_by == 'date') {
+        // if($this->catpages_order_by == 'position') {
             $temp_categories = array();
             $ignored_categories = array();
 
@@ -54,9 +54,9 @@ class PicoCategorizedPages extends AbstractPicoPlugin
 
                 if($current_category != '' && !in_array($current_category, $ignored_categories)
                     && !array_key_exists($current_category, $temp_categories)
-                    && $page['meta']['category_position'] != '') {
+                    &&$page['meta']['category_position'] != '') {
                         $temp_categories[$current_category]['title'] = $page['meta']['category_title'];
-                        $temp_categories[$current_category]['date'] = $page['meta']['category_position'];
+                        $temp_categories[$current_category]['position'] = $page['meta']['category_position'];
 
                         if(!$page['meta']['page_ignore']) {
                             $temp_categories[$current_category]['pages'][1]['title'] = $page['title'];
@@ -72,21 +72,21 @@ class PicoCategorizedPages extends AbstractPicoPlugin
                 if($current_category != ''
                     && !in_array($current_category, $ignored_categories)
                     && array_key_exists($current_category, $temp_categories)
-                    && $page['meta']['category_position'] == ''
+                    &&$page['meta']['category_position'] == ''
                     && !$page['meta']['page_ignore']) {
-                        $temp_categories[$current_category]['pages'][$page['meta']['date']]['title'] = $page['title'];
-                        $temp_categories[$current_category]['pages'][$page['meta']['date']]['url'] = $page['url'];
-                        $temp_categories[$current_category]['pages'][$page['meta']['date']]['meta'] = $page['meta'];
+                        $temp_categories[$current_category]['pages'][$page['meta']['position']]['title'] = $page['title'];
+                        $temp_categories[$current_category]['pages'][$page['meta']['position']]['url'] = $page['url'];
+                        $temp_categories[$current_category]['pages'][$page['meta']['position']]['meta'] = $page['meta'];
                 }
             }
 
             foreach($temp_categories as $current_category) {
-                if(isset($current_category['date'])) {
+                if(isset($current_category['position'])) {
                     if($this->catpages_order == 'desc')
-                        ksort($current_category['pages']);
-                    else
                         krsort($current_category['pages']);
-                    $this->categories[$current_category['date']] = $current_category;
+                    else
+                        ksort($current_category['pages']);
+                    $this->categories[$current_category['position']] = $current_category;
                 }
             }
 
@@ -94,7 +94,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
                 krsort($this->categories);
             else
                 ksort($this->categories);
-        }
+        // }
     }
 
     public function onPageRendering(Twig_Environment &$twig, array &$twigVariables, &$templateName)

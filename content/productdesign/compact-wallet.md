@@ -2,8 +2,8 @@
 Template: project
 Title: Compact Wallet
 Category: Product design
-Position: 2
 Coverimg: blue.jpg
+Date: 17 june 2018
 ---
 
 ## This is a Sub Page Index

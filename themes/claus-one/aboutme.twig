@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+      {% if meta.title %}
+        {{ meta.title }} |
+        {% endif %}
+      {{ site_title }}
+    </title>
+
+    {% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}">
+    {% endif %}
+
+    {% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+</head>
+
+<body>
+<div class="grid">
+<nav id="nav">
+    <h1 id="logo">Claus</h1>
+
+    <ul id="main">
+      <li><a class="active">About Me</a></li>
+      <li><a href="/portfolio">Portfolio<a/></li>
+    </ul>
+</nav>
+
+<section class="content">
+ {{content}}
+</section>
+
+</div> <!-- end grid wrapper -->
+
+<div class="background"></div>
+</body>
+</html>

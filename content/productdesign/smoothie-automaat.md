@@ -2,8 +2,8 @@
 Template: project
 Title: Smoothie-automaat
 Category: Product design
-Position: 3
 Coverimg: boat.jpg
+Date: 26 august 2017
 ---
 
 ## This is a Sub Page

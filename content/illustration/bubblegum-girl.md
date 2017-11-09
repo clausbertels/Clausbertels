@@ -1,10 +1,9 @@
 ---
 Template: project
 Title: Bubblegum girl
-Position: 3
 Category: Illustration
 Coverimg: coast.jpg
-Date: 04/01/2016
+Date: 13 february 2017
 ---
 
 ## This is a Sub Page

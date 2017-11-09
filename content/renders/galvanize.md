@@ -2,8 +2,8 @@
 Template: project
 Title: Galvanize
 Category: Renders
-Position: 3
 Coverimg: cello.jpg
+Date: 13 december 2016
 ---
 
 ## This is a Sub Page

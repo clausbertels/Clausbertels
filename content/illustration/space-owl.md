@@ -1,10 +1,9 @@
 ---
 Template: project
 Title: Space Owl
-Position: 2
 Category: Illustration
 Coverimg: girl.jpg
-Date: 05/01/2015
+Date: 23 october 2016
 ---
 
 ## This is a Sub Page Index

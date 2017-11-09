@@ -2,8 +2,8 @@
 Template: project
 Title: PO events
 Category: Branding
-Position: 3
 Coverimg: elephant.jpg
+Date: 26 september 2016
 ---
 
 ## This is a Sub Page

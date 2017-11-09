@@ -1,5 +1,7 @@
 ---
-Title: All
+Template: portfolio
+Title: Portfolio
+Main: true
 Description: Pico is a stupidly simple, blazing fast, flat file CMS. And in this description you can type whatever you like.
 social:
     - title: Visit us on GitHub
@@ -8,7 +10,6 @@ social:
     - title: Join us on Freenode IRC Webchat
       url: https://webchat.freenode.net/?channels=%23picocms
       icon: chat
-Template: portfolio
 ---
 
 ## Welcome to Pico
@@ -173,12 +174,12 @@ to use in your theme. Please note that paths (e.g. `{{ base_dir }}`) and URLs
 (e.g. `{{ base_url }}`) don't have a trailing slash.
 
 * `{{ config }}` - Contains the values you set in `config/config.php`
-                   (e.g. `{{ config.theme }}` becomes `default`)
+         (e.g. `{{ config.theme }}` becomes `default`)
 * `{{ base_dir }}` - The path to your Pico root directory
 * `{{ base_url }}` - The URL to your Pico site; use Twigs `link` filter to
-                     specify internal links (e.g. `{{ "sub/page"|link }}`),
-                     this guarantees that your link works whether URL rewriting
-                     is enabled or not
+         specify internal links (e.g. `{{ "sub/page"|link }}`),
+         this guarantees that your link works whether URL rewriting
+         is enabled or not
 * `{{ theme_dir }}` - The path to the currently active theme
 * `{{ theme_url }}` - The URL to the currently active theme
 * `{{ rewrite_url }}` - A boolean flag indicating enabled/disabled URL rewriting
@@ -193,7 +194,7 @@ to use in your theme. Please note that paths (e.g. `{{ base_dir }}`) and URLs
     * `{{ meta.robots }}`
     * ...
 * `{{ content }}` - The content of the current page
-                    (after it has been processed through Markdown)
+         (after it has been processed through Markdown)
 * `{{ pages }}` - A collection of all the content pages in your site
     * `{{ page.id }}` - The relative path to the content file (unique ID)
     * `{{ page.url }}` - The URL to the page
@@ -204,9 +205,9 @@ to use in your theme. Please note that paths (e.g. `{{ base_dir }}`) and URLs
     * `{{ page.date }}` - The date of the page (YAML header)
     * `{{ page.date_formatted }}` - The formatted date of the page
     * `{{ page.raw_content }}` - The raw, not yet parsed contents of the page;
-                                 use Twigs `content` filter to get the parsed
-                                 contents of a page by passing its unique ID
-                                 (e.g. `{{ "sub/page"|content }}`)
+             use Twigs `content` filter to get the parsed
+             contents of a page by passing its unique ID
+             (e.g. `{{ "sub/page"|content }}`)
     * `{{ page.meta }}`- The meta values of the page
 * `{{ prev_page }}` - The data of the previous page (relative to `current_page`)
 * `{{ current_page }}` - The data of the current page

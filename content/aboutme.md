@@ -1,5 +1,7 @@
 ---
-Title: Welcome
+Template: aboutme
+Title: About me
+Main: true
 Description: And in this description you can type whatever you like.
 ---
 

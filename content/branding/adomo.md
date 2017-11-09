@@ -2,8 +2,8 @@
 Template: project
 Title: Adomo
 Category: Branding
-Position: 2
 Coverimg: smartphone.jpg
+Date: 25 may 2015
 ---
 
 ## This is a Sub Page Index

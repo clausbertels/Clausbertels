@@ -36,7 +36,7 @@ $config['twig_config'] = array(              // Twig settings
 
 /*
 CONTENT */
-$config['date_format'] = '%d/%m/%Y';            // http://php.net/manual/en/function.strftime.php
+$config['date_format'] = '%d.%m.%Y';            // http://php.net/manual/en/function.strftime.php
 $config['pages_order_by'] = 'date';         // Order pages by "alpha" or "date"
 $config['pages_order'] = 'desc';              // Order pages "asc" or "desc"
 // $config['content_dir'] = 'content-sample/';  // Content directory
@@ -55,6 +55,6 @@ $config['PicoCategorizedPages.enabled'] = true;
 /*
 CUSTOM Can be accessed by {{ config.custom_setting }} in a theme */
 // $config['custom_setting'] = 'Hello';
-$config['catpages_order_by'] = 'date';             // Needed by PicoCategorizedPages
+$config['catpages_order_by'] = 'position';           // Needed by PicoCategorizedPages
 $config['catpages_order'] = 'desc';                 // Order pages "asc" or "desc"
 $config['categories_order'] = 'asc';              // Order categories "asc" or "desc"

@@ -18,7 +18,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     protected $catpages_order_by;
     protected $categories_order;
 
-    public function onConfigLoaded(array & $config)
+    public function onConfigLoaded(array &$config)
     {
         $this->base_url = $this->getConfig('base_url');
         $this->catpages_order = $this->getConfig('catpages_order');
@@ -26,7 +26,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
         $this->categories_order = $this->getConfig('categories_order');
     }
 
-    public function onMetaHeaders(array & $headers)
+    public function onMetaHeaders(array &$headers)
     {
        $headers['position'] = 'Position';
        $headers['page_ignore'] = 'Page_Ignore';
@@ -36,10 +36,10 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     }
 
     public function onPagesLoaded(
-    array & $pages,
-    array & $currentPage = null,
-    array & $previousPage = null,
-    array & $nextPage = null
+    array &$pages,
+    array &$currentPage = null,
+    array &$previousPage = null,
+    array &$nextPage = null
     ) {
         if($this->catpages_order_by == 'position') {
             $temp_categories = array();
@@ -54,7 +54,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
 
                 if($current_category != '' && !in_array($current_category, $ignored_categories)
                     && !array_key_exists($current_category, $temp_categories)
-                    && $page['meta']['category_position'] != '') {
+                    &&$page['meta']['category_position'] != '') {
                         $temp_categories[$current_category]['title'] = $page['meta']['category_title'];
                         $temp_categories[$current_category]['position'] = $page['meta']['category_position'];
 
@@ -72,7 +72,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
                 if($current_category != ''
                     && !in_array($current_category, $ignored_categories)
                     && array_key_exists($current_category, $temp_categories)
-                    && $page['meta']['category_position'] == ''
+                    &&$page['meta']['category_position'] == ''
                     && !$page['meta']['page_ignore']) {
                         $temp_categories[$current_category]['pages'][$page['meta']['position']]['title'] = $page['title'];
                         $temp_categories[$current_category]['pages'][$page['meta']['position']]['url'] = $page['url'];

@@ -2,8 +2,8 @@
 Template: project
 Title: Cork Bowl
 Category: Renders
-Position: 2
 Coverimg: camera.jpg
+Date: 10 december 2016
 ---
 
 ## This is a Sub Page Index

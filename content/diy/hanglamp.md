@@ -2,8 +2,8 @@
 Template: project
 Title: Hanglamp
 Category: DIY
-Position: 2
 Coverimg: leopard.jpg
+Date: 11 december 2015
 ---
 
 ## This is a Sub Page
