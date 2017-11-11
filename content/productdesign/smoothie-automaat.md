@@ -4,6 +4,7 @@ Title: Smoothie-automaat
 Category: Product design
 Coverimg: boat.jpg
 Date: 26 august 2017
+Position: 3
 ---
 
 ## This is a Sub Page

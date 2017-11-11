@@ -18,7 +18,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     protected $catpages_order_by;
     protected $categories_order;
 
-    public function onConfigLoaded(array &$config)
+    public function onConfigLoaded(array &$config) // load configuration settings into local variables
     {
         $this->base_url = $this->getConfig('base_url');
         $this->catpages_order = $this->getConfig('catpages_order');
@@ -26,7 +26,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
         $this->categories_order = $this->getConfig('categories_order');
     }
 
-    public function onMetaHeaders(array &$headers)
+    public function onMetaHeaders(array &$headers) // not sure what this does
     {
        $headers['position'] = 'Position';
        $headers['page_ignore'] = 'Page_Ignore';
@@ -41,54 +41,63 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     array &$previousPage = null,
     array &$nextPage = null
     ) {
-        // if($this->catpages_order_by == 'position') {
+        // if($this->catpages_order_by == 'position') { There's no other value than 'position' so useless for now
             $temp_categories = array();
             $ignored_categories = array();
 
-            foreach($pages as $page) {
+            foreach($pages as $page) { // first loop
                 $current_category = $this->getCurrentCategoryFromURL($page['url']);
 
-                if($page['meta']['category_ignore'] == true) {
-                    array_push($ignored_categories, $current_category);
+                if($page['meta']['category_ignore'] == true) { // if cat ignored, add to ignored cats array
+                    $ignored_categories[] = $current_category;
+                    // equals array_push($ignored_categories, $current_category);
                 }
 
-                if($current_category != '' && !in_array($current_category, $ignored_categories)
-                    && !array_key_exists($current_category, $temp_categories)
-                    &&$page['meta']['category_position'] != '') {
-                        $temp_categories[$current_category]['title'] = $page['meta']['category_title'];
-                        $temp_categories[$current_category]['position'] = $page['meta']['category_position'];
+                if( $current_category != '' // if not empty
+                    && !in_array($current_category, $ignored_categories) // if not ignored
+                    && !array_key_exists($current_category, $temp_categories) // if it's not in temp_cat yet
+                    && $page['meta']['category_position'] != '') { // cat_pos is not empty aka it's the index page
+                        $temp_categories[$current_category]['title'] = $page['meta']['category_title']; // add key cat_title in temp
+                        $temp_categories[$current_category]['position'] = $page['meta']['category_position']; // add key cat_pos in temp
 
-                        if(!$page['meta']['page_ignore']) {
-                            $temp_categories[$current_category]['pages'][1]['title'] = $page['title'];
-                            $temp_categories[$current_category]['pages'][1]['url'] = $page['url'];
-                            $temp_categories[$current_category]['pages'][1]['meta'] = $page['meta'];
+                        if(!$page['meta']['page_ignore']) { // if page is not ignored
+                            $temp_categories[$current_category]['pages'][0]['title'] = $page['title']; // p.title is stored in the page's array
+                            $temp_categories[$current_category]['pages'][0]['url'] = $page['url']; // same 
+                            $temp_categories[$current_category]['pages'][0]['meta'] = $page['meta']; // p.meta[] is stored
                         }
                 }
             }
 
-            foreach($pages as $page) {
+            foreach($pages as $page) { // second loop
                 $current_category = $this->getCurrentCategoryFromURL($page['url']);
 
-                if($current_category != ''
-                    && !in_array($current_category, $ignored_categories)
-                    && array_key_exists($current_category, $temp_categories)
-                    &&$page['meta']['category_position'] == ''
-                    && !$page['meta']['page_ignore']) {
-                        $temp_categories[$current_category]['pages'][$page['meta']['position']]['title'] = $page['title'];
+                if( $current_category != '' // if not empty
+                    && !in_array($current_category, $ignored_categories) // if not ignored
+                    && array_key_exists($current_category, $temp_categories) // if it exists in temp_cat
+                    && $page['meta']['category_position'] == '' // if key cat_pos is empty (or it doesn't exist, aka it's not the index page?)
+                    && !$page['meta']['page_ignore']) { // if page is not ignored
+                        $temp_categories[$current_category]['pages'][$page['meta']['position']]['title'] = $page['title']; 
                         $temp_categories[$current_category]['pages'][$page['meta']['position']]['url'] = $page['url'];
                         $temp_categories[$current_category]['pages'][$page['meta']['position']]['meta'] = $page['meta'];
                 }
             }
 
-            foreach($temp_categories as $current_category) {
-                if(isset($current_category['position'])) {
-                    if($this->catpages_order == 'desc')
-                        krsort($current_category['pages']);
-                    else
-                        ksort($current_category['pages']);
-                    $this->categories[$current_category['position']] = $current_category;
+            foreach($temp_categories as $current_category) { // third loop
+                if(isset($current_category['position'])) { // if key position exists (necessary?)
+                    krsort($current_category['pages']); // sort reverse (descending)
+                    $this->categories[$current_category['position']] = $current_category; // add cat to categories array
                 }
             }
+
+            // function dateSort($a, $b) 
+            // {
+            //     return strtotime($a) - strtotime($b);
+            // }
+
+            // foreach($temp_categories as $current_category) {
+            //     uksort($current_category['pages'], "dateSort");
+            //     $this->categories[$current_category['meta']['date']] = $current_category;
+            // }
 
             if($this->categories_order == 'desc')
                 krsort($this->categories);
@@ -100,7 +109,7 @@ class PicoCategorizedPages extends AbstractPicoPlugin
     public function onPageRendering(Twig_Environment &$twig, array &$twigVariables, &$templateName)
     {
         if($this->categories)
-            $twigVariables['categories'] = $this->categories;
+            $twigVariables['categories'] = $this->categories; // make this categories array available to twig
     }
 
     private function getCurrentCategoryFromURL($url)

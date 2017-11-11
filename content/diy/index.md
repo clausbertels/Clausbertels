@@ -1,7 +1,7 @@
 ---
 Template: portfolio
 Title: DIY
-Position: 1
+<!-- Position: 1 -->
 Page_Ignore: false
 Category_Title: DIY
 Category_Position: 5

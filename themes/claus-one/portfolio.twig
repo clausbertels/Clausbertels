@@ -38,7 +38,7 @@
       {% for cat in categories %}
         <li>
           <a
-            href="{{ cat.pages[1].url|replace({'index':''}) }}"
+            href="{{ cat.pages[0].url|replace({'index':''}) }}"
             {% if cat.title == current_page.title %}
               class="active"
             {% endif %}
@@ -58,6 +58,12 @@
       {% for p in cat.pages if not p.meta.category_title %} <!-- loop all pages except index -->
         <a href="{{p.url}}" class="project" style="background-image: url('/assets/{{cat.title|replace({' ':''})|lower}}/{{p.meta.coverimg}}');">
           <h1><span>{{p.title}}</span></h1>
+{#           <h2>
+            <span>
+              {{ p.meta.category }}
+              {% if p.date %} | {{ p.date }} {% endif %}
+            </span>
+          </h2> #}
         </a>
       {% endfor %}
     {% endfor %}
