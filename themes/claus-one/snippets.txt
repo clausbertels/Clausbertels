@@ -9,6 +9,9 @@
 {{ pages }} data array of all pages
 {{ current_page }} data array of current page ( use {{current_page.var}} )
 
+{% if current_page.meta.category_title|lower|replace({' ':''}) in p.id %}
+
+
 //////// CSS
 .grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
@@ -27,7 +30,6 @@ label, input[type=button], input[type=submit], button {
 img {
     -ms-interpolation-mode: bicubic;
 }
-
 
 
 abbr, acronym {

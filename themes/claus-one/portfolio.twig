@@ -4,9 +4,6 @@
     <meta charset="utf-8" />
 
     <title>
-      {% if meta.title %}
-        {{ meta.title }} |
-        {% endif %}
       {{ site_title }}
     </title>
 
@@ -28,61 +25,30 @@
     <h1 id="logo">Claus</h1>
 
     <ul id="main">
-      <li><a href="/aboutme">About Me</a></li>
+      <li><a href="/aboutme/">About Me</a></li>
       <li><a class="active">Portfolio<a/></li>
     </ul>
 
     <ul class="sub">
-      <li>
-        <a href="/portfolio" {% if meta.title|lower == "portfolio" %} class="active" {% endif %}>All</a></li>
-      {% for cat in categories %}
+      {% for p in pages|only('portfolio')|sort_by(['meta','pos']) if p.meta.category_title %}
         <li>
-          <a
-            href="{{ cat.pages[0].url|replace({'index':''}) }}"
-            {% if cat.title == current_page.title %}
-              class="active"
-            {% endif %}
-          >
-            {{ cat.title }}
+          <a href="{{ p.id|replace({'index':''})|link }}" {% if meta.category_title == p.meta.category_title %}class="active"{% endif %}>
+            {{ p.meta.category_title }}
           </a>
         </li>
       {% endfor %}
-    </ul>
+      </ul>
   </nav>
+  
+    {# loop projects #}
 
+  {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
+    <a href="{{ p.id|link }}" class="project" style="background-image: url('/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}');">
+      <h1><span>{{ p.title }}</span></h1>
+      {% if meta.category_title == "All" %}<span class="cat">{{ p.meta.category }}</span>{% endif %}
+    </a>
+  {% endfor %} 
 
-  {% if current_page.title|lower != "portfolio" %}
-
-    <!-- CATEGORIES -->
-    {% for cat in categories if cat.title == current_page.title %} <!-- loop only current category -->
-      {% for p in cat.pages if not p.meta.category_title %} <!-- loop all pages except index -->
-        <a href="{{p.url}}" class="project" style="background-image: url('/assets/{{cat.title|replace({' ':''})|lower}}/{{p.meta.coverimg}}');">
-          <h1><span>{{p.title}}</span></h1>
-{#           <h2>
-            <span>
-              {{ p.meta.category }}
-              {% if p.date %} | {{ p.date }} {% endif %}
-            </span>
-          </h2> #}
-        </a>
-      {% endfor %}
-    {% endfor %}
-
-  {% else %}
-
-    <!-- ALL -->
-    {% for p in pages if not p.meta.category_title and p.meta.category %}
-      <a href="{{p.url}}" class="project" style="background-image: url('/assets/{{p.meta.category|replace({' ':''})|lower}}/{{p.meta.coverimg}}');">
-        <h1><span>{{ p.title }}</span></h1>
-        <h2>
-          <span>
-            {{ p.meta.category }}
-            {% if p.date %} | {{ p.date_formatted }} {% endif %}
-          </span>
-        </h2>
-      </a>
-    {% endfor %}
-  {% endif %}
 
 </div> <!-- end grid wrapper -->
 

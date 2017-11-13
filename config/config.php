@@ -45,7 +45,7 @@ $config['pages_order'] = 'desc';              // Order pages "asc" or "desc"
 
 /*
 TIMEZONE */
-// $config['timezone'] = 'UTC';  // Timezone may be required by your php install
+$config['timezone'] = 'UTC+01';  // Timezone may be required by your php install
 
 
 /*

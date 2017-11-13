@@ -1,6 +1,6 @@
 ---
 Template: project
-Title: ThinTable
+Title: Thin Table
 Category: DIY
 Coverimg: shoe.jpg
 Date: 11 december 2015
