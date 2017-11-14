@@ -1,5 +1,6 @@
 ---
 template: portfolio
-category_title: DIY
+category: DIY
 pos: 6
+index: true
 ---

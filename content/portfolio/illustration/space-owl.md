@@ -2,7 +2,7 @@
 Template: project
 Title: Space Owl
 Category: Illustration
-Coverimg: girl.jpg
+Coverimg: space-owl-cover.png
 Date: 23 october 2016
 ---
 

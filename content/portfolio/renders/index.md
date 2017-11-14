@@ -1,6 +1,7 @@
 ---
 template: portfolio
-category_title: Renders
+category: Renders
 pos: 5
+index: true
 ---
 

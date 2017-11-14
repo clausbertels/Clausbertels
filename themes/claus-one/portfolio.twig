@@ -1,57 +1,60 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8" />
+{% extends "base.twig" %}
 
-    <title>
-      {{ site_title }}
-    </title>
 
-    {% if meta.description %}
-        <meta name="description" content="{{ meta.description|striptags }}">
-    {% endif %}
+{% block styles %}
+  <link rel="stylesheet" href="{{ theme_url }}/portfolio.css" type="text/css" />
+{% endblock %}
 
-    {% if meta.robots %}
-        <meta name="robots" content="{{ meta.robots }}">
-    {% endif %}
 
-    <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
-</head>
+{% block mainnav %}
+  <ul id="main">
+    <li><a href="/aboutme/">About me</a></li>
+    <li><a class="active">Portfolio<a/></li>
+  </ul>
+{% endblock %}
 
-<body>
-<div class="grid">
 
-  <nav id="nav">
-    <h1 id="logo">Claus</h1>
+{% block subnav %}
+  <ul class="categories">
+    {% for p in pages|only('portfolio')|sort_by(['meta','pos']) if p.meta.index %} 
+      <li>
+        <a href="{{ p.id|replace({'index':''})|link }}" {% if meta.category == p.meta.category %}class="active"{% endif %}>
+          {{ p.meta.category }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
 
-    <ul id="main">
-      <li><a href="/aboutme/">About Me</a></li>
-      <li><a class="active">Portfolio<a/></li>
-    </ul>
 
-    <ul class="sub">
-      {% for p in pages|only('portfolio')|sort_by(['meta','pos']) if p.meta.category_title %}
-        <li>
-          <a href="{{ p.id|replace({'index':''})|link }}" {% if meta.category_title == p.meta.category_title %}class="active"{% endif %}>
-            {{ p.meta.category_title }}
-          </a>
-        </li>
-      {% endfor %}
-      </ul>
-  </nav>
-  
-    {# loop projects #}
+{% block content %}
+  {# LOOP PROJECTS #}
 
-  {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
+  {# BACKGROUND IMAGE #}
+{#   {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
     <a href="{{ p.id|link }}" class="project" style="background-image: url('/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}');">
       <h1><span>{{ p.title }}</span></h1>
-      {% if meta.category_title == "All" %}<span class="cat">{{ p.meta.category }}</span>{% endif %}
+      {% if meta.category == "All" %}<span class="cat">{{ p.meta.category }}</span>{% endif %}
     </a>
-  {% endfor %} 
+  {% endfor %}  #}
 
 
-</div> <!-- end grid wrapper -->
+  {# INLINE IMAGE #}
+  {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
+    <a href="{{ p.id|link }}" class="project">
+      <figure>
+        <h1><span>{{ p.title }}</span></h1>
+        <img src="/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}" width="250" alt=""/>
+        {% if meta.category == "All" %}
+          <figcaption><span>{{ p.meta.category }}</span></figcaption>
+        {% endif %}
+      </figure>
+    </a>
+  {% endfor %}
 
-<div class="background"></div>
-</body>
-</html>
+  <div id="preload">
+    {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
+      <img src="/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}" />
+    {% endfor %}
+  </div>
+{% endblock %}

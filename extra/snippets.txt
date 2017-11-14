@@ -9,7 +9,7 @@
 {{ pages }} data array of all pages
 {{ current_page }} data array of current page ( use {{current_page.var}} )
 
-{% if current_page.meta.category_title|lower|replace({' ':''}) in p.id %}
+{% if meta.category|lower|replace({' ':''}) in p.id %}
 
 
 //////// CSS

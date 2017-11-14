@@ -48,7 +48,7 @@ body {
   color: black;
   background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizePrecision;
 }
 
 b, strong {
@@ -102,33 +102,23 @@ p {
   -webkit-transform:translate(-50%,-50%);
           transform:translate(-50%,-50%);
   -webkit-box-shadow: -2px 0 11px rgba(0,0,0,.05), 2px 0 11px rgba(0,0,0,.05);
-          box-shadow: -2px 0 11px rgba(0,0,0,.05), 2px 0 11px rgba(0,0,0,.05);
-}
+          box-shadow: -2px 0 11px rgba(0,0,0,.05), 2px 0 11px rgba(0,0,0,.05);}
 
 .grid {
   max-width: 1680px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  /*grid-gap: 1px;*/ /* To GAP OR NOT TO GAP? */
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.grid > * {
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  padding: 0 18px;
-  height: 90vh;
+.grid>* {  
+  height: 87vh;
   min-height: 518px;
+  padding: 0 18px;
 }
 
-.project {
-  display: -ms-grid;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
+
 
 
 /*************************************** NAVIGATION STYLES */
@@ -150,18 +140,14 @@ nav #main li a {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: bold;
-
-  /*font-family: Georgia, serif;*/
   padding: .1em 0;
 }
 
-nav .sub li a {
-  display: inline-block;
-  font-size: 1.15rem;
-  padding: .5em 0;
-}
-
 nav a {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+    -webkit-transform-origin: 50% 170%;
+          transform-origin: 50% 170%;
   text-decoration: none;
   color: black;
   -webkit-transition: all 0.12s ease;
@@ -173,7 +159,6 @@ nav a:link, nav a:visited {
 }
 
 nav a:visited {
-
 }
 
 nav a:focus {
@@ -184,77 +169,11 @@ nav a:hover {
 }
 
 nav a:active {
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  -webkit-transform: scale(.97);
+          transform: scale(.97);
 }
 
 nav a.active {
   opacity: 1;
   cursor: text;
-}
-
-/*************************************** PROJECT STYLES */
-
-.project {
-  text-decoration: none;
-  background-color: #333;
-  background-size: auto 104%;
-  background-position: 50% 50%;
-  -webkit-transition: background-size .08s ease-out;
-  transition: background-size .08s ease-out;
-}
-
-.project h1 { /* heading */
-  font: normal 3.5rem Georgia, serif;
-  color: black;
-  margin: 3rem 0 2rem 0;
-  letter-spacing: -.02em;
-}
-
-.project h1>span { /* heading */
-  background: white;
-  padding: 0 .16em 0 .12em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 3rem;
-}
-
-.project h2 { /* category */
-}
-
-.project .cat { /* category */
-  font: normal 1.15rem Arial, sans-serif;
-  color: white;
-  margin-bottom: 18px;
-  /*background: black;*/
-  padding: 0 .16em 0 .12em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
-/* NOT WORKING IN FIREFOX? */
-@media (any-hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
-  .project>h1 {
-    opacity: 0;
-    -webkit-filter: blur(4px);
-            filter: blur(4px); /* BETER NIE? */
-    -webkit-transition: all .14s ease-out;
-    transition: all .14s ease-out;
-  }
-
-  .project:hover>h1 {
-    opacity: 1;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-  }
-
-  .project:hover {
-    background-size: auto 100%;
-  }  /*SHOULD PRIORITIZE TRANSFORM-SCALE: NO MORE BACKGROUND IMAGES*/
-}
-
-.project:focus, .project:active {
-  background-size: auto 100%;
 }

@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ theme_url }}/about.css" type="text/css" />
+{% endblock %}
+
+
+{% block mainnav %}
+  <ul id="main">
+    <li><a class="active">About me</a></li>
+    <li><a href="/portfolio/">Portfolio<a/></li>
+  </ul>
+{% endblock %}
+
+
+{% block subnav %}
+  Contact:
+  <ul>
+{#     {% for m in current_page %}
+      {% for %}
+    {% endfor %}
+  {% endfor %} #}
+  </ul>
+{% endblock %}
+
+
+{% block content %}
+  <section class="content">
+    {{ content }} 
+  </section>
+
+  <aside class="picture">
+  </aside>
+{% endblock %}

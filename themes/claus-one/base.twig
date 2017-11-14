@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+
+  <title>
+    {{ site_title }}
+  </title>
+
+  {% if meta.description %}
+      <meta name="description" content="{{ meta.description|striptags }}">
+  {% endif %}
+
+  {% if meta.robots %}
+      <meta name="robots" content="{{ meta.robots }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ theme_url }}/base.css" type="text/css" />
+
+  {% block styles %}
+  {% endblock %}
+</head>
+
+<body>
+<div class="grid">
+
+  <nav id="nav">
+    <h1 id="logo">Claus</h1>
+
+    {% block mainnav %}
+    {% endblock %}
+
+    {% block subnav %}
+    {% endblock %}
+  </nav>
+
+  {% block content %}
+  {% endblock %}
+</div> <!-- end grid wrapper -->
+
+<div class="background"></div>
+</body>
+</html>

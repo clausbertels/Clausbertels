@@ -1,5 +1,6 @@
 ---
 template: portfolio
-category_title: Illustration
+category: Illustration
 pos: 3
+index: true
 ---

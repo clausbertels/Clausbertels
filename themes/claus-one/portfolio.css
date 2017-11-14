@@ -1,0 +1,114 @@
+#preload {
+  display: none;
+}
+
+nav .categories li a {
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: .5em 0;
+}
+
+.project {
+  padding: unset; /* base.css defines padding on all major grid direct children */
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+      hyphens: auto;
+  display: grid;
+  justify-items: start;
+  text-decoration: none;
+  background-color: #333;
+  background-size: auto 104%;
+  background-position: 50% 50%;
+  -webkit-transition: background-size .08s cubic-bezier(0,0,.33,1);
+  transition: background-size .08s cubic-bezier(0,0,.33,1);
+}
+
+.project>figure {
+  overflow: hidden;
+  color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.project figure>h1 { /* heading */
+  grid-row: 1/2;
+  grid-column: 1/2;
+  z-index: 1;
+  font: normal 3.5rem Georgia, serif;
+  color: black;
+  margin: 3rem 0 2rem 18px;
+  letter-spacing: -.02em;
+}
+.project h1>span {
+  background: white;
+  padding: 0 .16em 0 .12em;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+.project figure>img {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  z-index: 0;
+      transform: translate3d(0,0,0);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  -o-object-fit: cover;
+     object-fit: cover;
+     height: 100%; width: 100%;
+  -webkit-transition: -webkit-transform 80ms cubic-bezier(0,0,.33,1);
+  transition: -webkit-transform 80ms cubic-bezier(0,0,.33,1);
+  -webkit-transition: -webkit-transform 80ms cubic-bezier(0,0,.33,1);
+  transition: -webkit-transform 80ms cubic-bezier(0,0,.33,1);
+  transition: transform 80ms cubic-bezier(0,0,.33,1);
+  transition: transform 80ms cubic-bezier(0,0,.33,1), -webkit-transform 80ms cubic-bezier(0,0,.33,1);
+}
+
+.project figure>figcaption { /* category */
+  grid-row: 3/4;
+  grid-column: 1/2;
+  z-index: 1;
+  font: normal 1.15rem Arial, sans-serif;
+  color: white;
+  margin: 0 0 18px 18px;
+}
+.project figcaption>span {
+    background: black;
+    padding: 0 .16em 0 .12em;
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+}
+
+/* NOT WORKING IN FIREFOX? -moz- PREFIX EVERYWHERE -- AUTOPREFIXER HALLO?*/
+@media (hover: hover) { /* ONLY ON HOVER-CAPABLE DEVICES */
+  .project h1 { 
+    opacity: 0;
+    -webkit-filter: blur(5px);
+            filter: blur(5px); 
+    -webkit-transition: opacity 220ms cubic-bezier(0,0,.33,1);
+            transition: opacity 220ms cubic-bezier(0,0,.33,1);
+    -webkit-transition: -webkit-filter 190ms cubic-bezier(0,0,.33,1);
+    transition: -webkit-filter 190ms cubic-bezier(0,0,.33,1);
+    transition: filter 190ms cubic-bezier(0,0,.33,1);
+    transition: filter 190ms cubic-bezier(0,0,.33,1), -webkit-filter 190ms cubic-bezier(0,0,.33,1);
+  }
+
+  .project:hover figure>h1 {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+
+  .project:hover figure>img {
+    transform: translate3d(0,0,0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.project:focus, .project:active {
+  transform: translate3d(0,0,0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}

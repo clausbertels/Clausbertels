@@ -1,5 +1,6 @@
 ---
 template: portfolio
-category_title: Branding
+category: Branding
 pos: 4
+index: true
 ---

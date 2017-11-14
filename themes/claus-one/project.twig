@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8" />
+{% extends "portfolio.twig" %}
 
-  <title>
-    Project Template
-  </title>
 
-  <style type="text/css">
-    body {font-family: Arial, sans-serif;}
-  </style>
-</head>
+{% block styles %}
+  {{ parent() }}
+{% endblock %}
 
-<body>
 
-  <p>
-    {{ site_title }}<br />
-    {{ theme_dir }}<br />
-    {{ current_page.id }}<br />
-    {{ meta.title }}<br />
-    {{ meta.date_formatted }}
-  </p>
-    <hr />
-  {{ content }}
-</body>
+{% block mainnav %}
+ {{ parent() }}
+{% endblock %}
 
-</html>
+
+{% block subnav %}
+  {{ parent() }}
+{% endblock %}
+
+
+{% block content %}
+  <section class="">
+    {{ content }}
+  </section>
+{% endblock %}

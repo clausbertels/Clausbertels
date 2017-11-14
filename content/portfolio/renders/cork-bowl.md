@@ -2,7 +2,7 @@
 Template: project
 Title: Cork Bowl
 Category: Renders
-Coverimg: camera.jpg
+Coverimg: cork-bowl-cover.png
 Date: 10 december 2016
 ---
 

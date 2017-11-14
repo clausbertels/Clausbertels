@@ -1,8 +1,8 @@
 ---
 Template: project
-Title: Galvanize
+Title: Galvanise
 Category: Renders
-Coverimg: cello.jpg
+Coverimg: galvanise-cover.png
 Date: 13 december 2016
 ---
 
