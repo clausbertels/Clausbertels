@@ -2,7 +2,8 @@
 Template: project
 Title: Galvanise
 Category: Renders
-Coverimg: galvanise-cover.png
+Coverimg: galvanise-cover.jpg
+
 Date: 13 december 2016
 ---
 

@@ -43,11 +43,18 @@
   {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
     <a href="{{ p.id|link }}" class="project">
       <figure>
-        <h1><span>{{ p.title }}</span></h1>
+        <h1>{{ p.title }}</h1>
         <img src="/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}" width="250" alt=""/>
-        {% if meta.category == "All" %}
-          <figcaption><span>{{ p.meta.category }}</span></figcaption>
-        {% endif %}
+        {# {% if meta.category == "All" %} #}
+          <figcaption>
+            <ul>
+              <li>{{ p.meta.category }}</li> 
+              <li>{{ p.meta.date }}</li>
+              <li>In collaboration with <em>Theresa Vermeulen</em></li>
+              <li>Client: <em>Danesh Smith</em></li>
+            </ul>
+          </figcaption>
+        {# {% endif %}  #}
       </figure>
     </a>
   {% endfor %}

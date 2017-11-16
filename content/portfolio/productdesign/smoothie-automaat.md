@@ -2,7 +2,7 @@
 Template: project
 Title: Smoothie automaat
 Category: Product design
-Coverimg: smoothie-automaat-cover.png
+Coverimg: smoothie-automaat-cover.jpg
 Date: 26 august 2017
 ---
 

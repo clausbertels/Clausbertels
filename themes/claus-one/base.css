@@ -1,10 +1,10 @@
 /*************************************** RESET STYLES */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-dl, dt, dd,
+dl, dt, dd, ul, li,
 fieldset, form, label, legend, figure,
 table, span, tbody, tfoot, thead, tr, th, td {
     margin: 0;
@@ -20,11 +20,6 @@ table, span, tbody, tfoot, thead, tr, th, td {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-span, th, td {
-    text-align: left;
-    font-weight: normal;
 }
 
 label, input[type=button], input[type=submit], button {
@@ -44,7 +39,7 @@ img {
 
 /*************************************** MAIN STYLES */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Knile', Arial, sans-serif;
   color: black;
   background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
@@ -109,12 +104,12 @@ p {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
 }
 
 .grid>* {  
-  height: 87vh;
-  min-height: 518px;
+  height: 50vh;
+  min-height: 380px;
   padding: 0 18px;
 }
 
@@ -123,9 +118,8 @@ p {
 
 /*************************************** NAVIGATION STYLES */
 #logo {
-  font: bold 3.5rem Georgia, serif;
+  font: 900 3.5rem/.9 'Knile', 'Book Antiqua', serif;
   margin: 3rem 0 2rem -5px;
-  letter-spacing: -.02em;
   cursor: default;
   text-rendering: geometricPrecision;
 }
@@ -139,8 +133,8 @@ nav ul {
 nav #main li a {
   display: inline-block;
   font-size: 1.5rem;
-  font-weight: bold;
-  padding: .1em 0;
+  font-weight: 500;
+  padding: .1rem 0;
 }
 
 nav a {
