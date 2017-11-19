@@ -7,21 +7,14 @@
 
 
 {% block mainnav %}
-  <ul id="main">
-    <li><a class="active">About me</a></li>
-    <li><a href="/portfolio/">Portfolio<a/></li>
+  <ul class="main">
+    <li><a class="active">Claus</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
   </ul>
 {% endblock %}
 
 
 {% block subnav %}
-  Contact:
-  <ul>
-{#     {% for m in current_page %}
-      {% for %}
-    {% endfor %}
-  {% endfor %} #}
-  </ul>
 {% endblock %}
 
 
@@ -29,7 +22,4 @@
   <section class="content">
     {{ content }} 
   </section>
-
-  <aside class="picture">
-  </aside>
 {% endblock %}

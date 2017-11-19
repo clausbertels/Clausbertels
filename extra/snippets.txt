@@ -17,6 +17,8 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
 }
 
+font: 900 3.5rem/.9 'Knile', 'Book Antiqua', serif;
+
 
 /* hand cursor on clickable input elements */
 label, input[type=button], input[type=submit], button {

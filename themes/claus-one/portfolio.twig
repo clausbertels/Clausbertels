@@ -7,9 +7,9 @@
 
 
 {% block mainnav %}
-  <ul id="main">
-    <li><a href="/aboutme/">About me</a></li>
-    <li><a class="active">Portfolio<a/></li>
+  <ul class="main">
+    <li><a href="/aboutme/">Claus</a></li>
+    <li><a class="active">Portfolio</a></li>
   </ul>
 {% endblock %}
 
@@ -40,6 +40,7 @@
 
 
   {# INLINE IMAGE #}
+<div class="grid"> 
   {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
     <a href="{{ p.id|link }}" class="project">
       <figure>
@@ -58,10 +59,5 @@
       </figure>
     </a>
   {% endfor %}
-
-  <div id="preload">
-    {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
-      <img src="/assets/{{ p.meta.category|replace({' ':''})|lower }}/{{ p.meta.coverimg }}" />
-    {% endfor %}
-  </div>
+</div>
 {% endblock %}

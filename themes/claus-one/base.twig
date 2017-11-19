@@ -15,29 +15,27 @@
       <meta name="robots" content="{{ meta.robots }}">
   {% endif %}
 
+  <meta name="viewport" content="initial-scale=1">
+
   <link rel="stylesheet" href="{{ theme_url }}/base.css" type="text/css" />
-  <link rel="stylesheet" href="{{ theme_url }}/fonts.css" type="text/css" />
+  <link rel="stylesheet" href="{{ theme_url }}/fonts.css" type="text/css" media="none" onload="if(media!='all')media='all'" />
 
   {% block styles %}
   {% endblock %}
 </head>
 
 <body>
-<div class="grid">
 
-  <nav id="nav">
-    <h1 id="logo">Claus</h1>
+<nav>
+  {% block mainnav %}
+  {% endblock %}
 
-    {% block mainnav %}
-    {% endblock %}
-
-    {% block subnav %}
-    {% endblock %}
-  </nav>
+  {% block subnav %}
+  {% endblock %}
+</nav>
 
   {% block content %}
   {% endblock %}
-</div> <!-- end grid wrapper -->
 
 <div class="background"></div>
 </body>

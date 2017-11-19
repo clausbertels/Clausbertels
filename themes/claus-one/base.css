@@ -1,4 +1,17 @@
 /*************************************** RESET STYLES */
+:root {
+  --font-stack: -apple-system, 
+                BlinkMacSystemFont, 
+                "Segoe UI", 
+                Roboto, 
+                Oxygen,
+                Ubuntu,
+                Cantarell,
+                "Open Sans",
+                "Helvetica Neue", 
+                sans-serif;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, acronym, address, big, cite, code,
@@ -12,9 +25,11 @@ table, span, tbody, tfoot, thead, tr, th, td {
     border: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 table {
@@ -26,24 +41,17 @@ label, input[type=button], input[type=submit], button {
     cursor: pointer;
 }
 
-img {
-    -ms-interpolation-mode: bicubic;
-}
-
-/*INDEX:
-1. RESET STYLES
-2. MAIN STYLES
-3. GRID STYLES
-4. NAVIGATION STYLES
-5. PROJECT STYLES*/
 
 /*************************************** MAIN STYLES */
 body {
-  font-family: 'Knile', Arial, sans-serif;
+  font-family: var(--font-stack);
   color: black;
-  background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizePrecision;
+}
+
+nav, .grid, .background {
+  max-width: 1680px;
 }
 
 b, strong {
@@ -87,55 +95,62 @@ p {
 /*************************************** GRID STYLES */
 
 .background {
-  z-index: -1;
-  height: 200vh;
-  width: 1680px;
-  background: white;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform:translate(-50%,-50%);
-          transform:translate(-50%,-50%);
-  -webkit-box-shadow: -2px 0 11px rgba(0,0,0,.05), 2px 0 11px rgba(0,0,0,.05);
-          box-shadow: -2px 0 11px rgba(0,0,0,.05), 2px 0 11px rgba(0,0,0,.05);}
+ display: none;
+}
 
 .grid {
-  max-width: 1680px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  grid-gap: 1px;
+  grid-template-columns: repeat(auto-fit, minmax(336px, 1fr));
 }
-
-.grid>* {  
-  height: 50vh;
-  min-height: 380px;
-  padding: 0 18px;
-}
-
 
 
 
 /*************************************** NAVIGATION STYLES */
-#logo {
-  font: 900 3.5rem/.9 'Knile', 'Book Antiqua', serif;
-  margin: 3rem 0 2rem -5px;
-  cursor: default;
-  text-rendering: geometricPrecision;
-}
 
 nav ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
+  overflow: hidden;
+  /*background: yellow;*/
 }
 
-nav #main li a {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 500;
-  padding: .1rem 0;
+nav ul li {
+  margin: 2px; padding: 0;
+  flex-shrink: 0;
+  /*background: pink;*/
 }
+
+nav {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 54px;
+  padding: 0 1vw;
+}
+
+nav ul {
+  align-items: center;
+}
+
+nav .main {
+  display: flex;
+  font: 900 1.2rem 'Knile', 'Book Antiqua', serif;
+}
+
+nav .categories {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  font-size: .8rem;
+}
+
+.main li a, .categories li a {
+  padding: 1vw;
+}
+
+
 
 nav a {
   -webkit-transform: translateZ(0);
@@ -149,7 +164,7 @@ nav a {
 }
 
 nav a:link, nav a:visited {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 nav a:visited {
@@ -170,4 +185,62 @@ nav a:active {
 nav a.active {
   opacity: 1;
   cursor: text;
+}
+
+
+@media screen and (max-width: 667px) {
+  nav {
+    padding: 0;
+  }
+  
+  .main li, .categories li {
+    padding: 2vh 0;
+  }
+  
+  nav, nav > * {
+    flex-direction: column;
+  }
+  
+  nav .main {
+    flex-wrap: wrap;
+    flex-basis: calc(1em + 4vh);
+    justify-content: space-evenly;
+    font-size: 10vw;
+    background: black;
+  }
+  
+  nav .categories {
+    justify-content: space-evenly;
+    align-items: start;
+    font-size: 9vw;
+    padding: 3vh;
+  }
+
+  nav .main a {
+    color: white;
+  }
+  
+  .background {
+    display: block;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform:translate(-50%,-100%);
+            transform:translate(-50%,-100%);
+  }
+}
+
+@supports (-webkit-backdrop-filter: blur()) {
+  nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255,255,255,.6);
+  }
 }

@@ -1,12 +1,12 @@
 ---
 Template: project
-Title: Smoothie automaat
+Title: Smoothie vending machine
 Category: Product design
 Coverimg: smoothie-automaat-cover.jpg
 Date: 26 august 2017
 ---
 
-## This is a Sub Page
+## %meta.title%
 
 This is `page.md` in the `sub` folder.
 
