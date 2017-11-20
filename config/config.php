@@ -19,7 +19,7 @@
 
 /*
 BASIC */
-$config['site_title'] = 'Claus Bertels';
+$config['site_title'] = 'Claus';
 //$config['base_url'] = 'claus.design'; // Override base URL (e.g. http://example.com)
 //$config['rewrite_url'] = true; // forced URL rewriting
 

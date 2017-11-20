@@ -1,0 +1,95 @@
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-thin-webfont/knile-thin-webfont.eot');
+    src: url('knile-thin-webfont/knile-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-thin-webfont/knile-thin-webfont.woff2') format('woff2'),
+         url('knile-thin-webfont/knile-thin-webfont.woff') format('woff'),
+         url('knile-thin-webfont/knile-thin-webfont.ttf') format('truetype'),
+         url('knile-thin-webfont/knile-thin-webfont.svg#knilethin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-extralight-webfont/knile-extralight-webfont.eot');
+    src: url('knile-extralight-webfont/knile-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-extralight-webfont/knile-extralight-webfont.woff2') format('woff2'),
+         url('knile-extralight-webfont/knile-extralight-webfont.woff') format('woff'),
+         url('knile-extralight-webfont/knile-extralight-webfont.ttf') format('truetype'),
+         url('knile-extralight-webfont/knile-extralight-webfont.svg#knileextralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-light-webfont/knile-light-webfont.eot');
+    src: url('knile-light-webfont/knile-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-light-webfont/knile-light-webfont.woff2') format('woff2'),
+         url('knile-light-webfont/knile-light-webfont.woff') format('woff'),
+         url('knile-light-webfont/knile-light-webfont.ttf') format('truetype'),
+         url('knile-light-webfont/knile-light-webfont.svg#knilelight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-regular-webfont/knile-regular-webfont.eot');
+    src: url('knile-regular-webfont/knile-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-regular-webfont/knile-regular-webfont.woff2') format('woff2'),
+         url('knile-regular-webfont/knile-regular-webfont.woff') format('woff'),
+         url('knile-regular-webfont/knile-regular-webfont.ttf') format('truetype'),
+         url('knile-regular-webfont/knile-regular-webfont.svg#knileregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-medium-webfont/knile-medium-webfont/knile-medium-webfont/knile-medium-webfont.eot');
+    src: url('knile-medium-webfont/knile-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-medium-webfont/knile-medium-webfont.woff2') format('woff2'),
+         url('knile-medium-webfont/knile-medium-webfont.woff') format('woff'),
+         url('knile-medium-webfont/knile-medium-webfont.ttf') format('truetype'),
+         url('knile-medium-webfont/knile-medium-webfont.svg#knilemedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-semibold-webfont/knile-semibold-webfont.eot');
+    src: url('knile-semibold-webfont/knile-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-semibold-webfont/knile-semibold-webfont.woff2') format('woff2'),
+         url('knile-semibold-webfont/knile-semibold-webfont.woff') format('woff'),
+         url('knile-semibold-webfont/knile-semibold-webfont.ttf') format('truetype'),
+         url('knile-semibold-webfont/knile-semibold-webfont.svg#knilesemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-bold-webfont/knile-bold-webfont.eot');
+    src: url('knile-bold-webfont/knile-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-bold-webfont/knile-bold-webfont.woff2') format('woff2'),
+         url('knile-bold-webfont/knile-bold-webfont.woff') format('woff'),
+         url('knile-bold-webfont/knile-bold-webfont.ttf') format('truetype'),
+         url('knile-bold-webfont/knile-bold-webfont.svg#knilebold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}*/
+
+/*@font-face {
+    font-family: 'Knile';
+    src: url('knile-black-webfont/knile-black-webfont.eot');
+    src: url('knile-black-webfont/knile-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knile-black-webfont/knile-black-webfont.woff2') format('woff2'),
+         url('knile-black-webfont/knile-black-webfont.woff') format('woff'),
+         url('knile-black-webfont/knile-black-webfont.ttf') format('truetype'),
+         url('knile-black-webfont/knile-black-webfont.svg#knileblack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}*/

@@ -1,0 +1,115 @@
+/***************************************************** UNIVERSAL */
+nav {
+  margin: 0 auto;
+}
+
+nav, nav > ul {
+  display: flex;
+}
+
+nav ul, nav li {
+  list-style-type: none;
+}
+
+nav .main {
+  font-family: var(--default-slab);
+  font-weight: 700;
+}
+
+nav .categories {
+  font-family: var(--default-sans);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: opacity 160ms var(--smooth-out);
+}
+
+nav a:link, nav a:visited {
+  opacity: 0.4;
+}
+
+nav a:focus {
+  outline: 1px dashed black;
+}
+
+nav a:hover {
+  opacity: 1;
+  transition: opacity 160ms var(--smooth-in);
+}
+
+nav a:active {
+  opacity: .2;
+}
+
+nav a.active {
+  opacity: 1;
+  cursor: text;
+}
+
+/**************************************************** SMALL SCREEN SPECIFIC */
+@media screen and (max-width: 667px) {
+  nav ul {
+    padding: 0 5vw;
+  }
+
+  nav, nav .categories {
+    flex-direction: column;
+  }
+
+  nav .main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 9vw;
+  }
+
+  nav .main li, nav .main a {
+    padding: .3em 0;
+  }
+
+  nav .categories,  nav .categories li, nav .categories a  {
+    padding-top: .4em;
+    padding-bottom: .4em;
+  }
+
+  nav .categories {
+    background: black;
+    /*height: 60vh;*/
+    justify-content: space-evenly;
+    align-items: start;
+
+    font-size: 7vw;
+  }
+
+  nav .categories li a {
+    color: white;
+  }  
+}
+
+/**************************************************** LARGE SCREEN SPECIFIC */
+@media screen and (min-width: 667px) {
+  nav {
+    padding: 0 1vw;
+  }
+
+  nav ul {
+  }
+
+  nav .main {
+    flex-grow: 1;
+    font-size: 1.2rem;
+  }
+
+  nav .categories {
+    align-items: center;
+    font-size: .9rem;
+  }
+
+  nav li, nav a {
+    padding: 1em .5vw;
+  }
+
+}

@@ -4,20 +4,16 @@
   <meta charset="utf-8" />
 
   <title>
-    {{ site_title }}
+    {{ site_title }} 
+    {% if current_page.title%}
+      | {{ current_page.title }}
+    {% endif %}
   </title>
-
-  {% if meta.description %}
-      <meta name="description" content="{{ meta.description|striptags }}">
-  {% endif %}
-
-  {% if meta.robots %}
-      <meta name="robots" content="{{ meta.robots }}">
-  {% endif %}
 
   <meta name="viewport" content="initial-scale=1">
 
   <link rel="stylesheet" href="{{ theme_url }}/base.css" type="text/css" />
+  <link rel="stylesheet" href="{{ theme_url }}/nav.css" type="text/css" />
   <link rel="stylesheet" href="{{ theme_url }}/fonts.css" type="text/css" media="none" onload="if(media!='all')media='all'" />
 
   {% block styles %}
@@ -26,17 +22,16 @@
 
 <body>
 
-<nav>
-  {% block mainnav %}
-  {% endblock %}
+  <nav>
+    {% block mainnav %}
+    {% endblock %}
 
-  {% block subnav %}
-  {% endblock %}
-</nav>
+    {% block subnav %}
+    {% endblock %}
+  </nav>
 
   {% block content %}
   {% endblock %}
 
-<div class="background"></div>
 </body>
 </html>
