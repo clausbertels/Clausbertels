@@ -2,7 +2,7 @@
 
 
 {% block styles %}
-  {{ parent() }}
+  <link rel="stylesheet" href="{{ theme_url }}/page.css" type="text/css" />
 {% endblock %}
 
 
@@ -17,7 +17,16 @@
 
 
 {% block content %}
-  <section class="">
+  <section class="content">
+  	<p>
+  		<script>
+    		document.write('<a href="' + document.referrer + '">← Go Back</a>');
+			</script>
+		</p>
+		<p class="meta">
+      {{ meta.date_formatted }}<br />
+      {% if meta.collab %} In collaboration with: <em>{{ meta.collab }}</em>.{% endif %}
+    </p>
     {{ content }}
   </section>
 {% endblock %}

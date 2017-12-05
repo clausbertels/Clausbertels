@@ -1,0 +1,71 @@
+.content {
+	font-family: var(--default-slab);
+	max-width: 900px;
+	padding: 4rem 5vw;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: unset;
+  font-weight: 700, bold;
+  margin: .5em 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+h1:first-of-type {
+	margin-top: 0;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 400, normal;
+	line-height: 1.4;
+	margin-bottom: 1.2em;
+}
+
+p.meta {
+	font-size: .8em;
+}
+
+.content a {
+	color: black;
+	text-decoration: none;
+	transition: opacity 160ms var(--smooth-out);
+	border-bottom: 2px solid rgba(0,0,0,.2);
+}
+
+.content a:link, .content a:visited {
+  opacity: 0.6;
+}
+
+.content a:focus {
+}
+
+.content a:hover {
+  opacity: 1;
+  transition: opacity 160ms var(--smooth-in);
+}
+
+.content a:active {
+  opacity: 0.2;
+}
+
+.content img {
+	min-width: 160px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 1rem;
+}
+
+.content img:not([width]) {
+	width: 100%;
+}
+

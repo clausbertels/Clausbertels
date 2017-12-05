@@ -1,15 +1,14 @@
 ---
-Template: project
-Title: Bubble&shy;gum girl
-Category: Illustration
-Coverimg: coast.jpg
-Date: 13 february 2017
+template: project
+title: Bubble&shy;gum girl
+category: Illustration
+coverimg: bubblegum-girl-cover.jpg
+date: 13 february 2017
+typora-root-url: ../../../../clausbertels3
 ---
 
-## This is a Sub Page
+# %meta.title%
 
-This is `page.md` in the `sub` folder.
+![bubblegum-girl](/assets/illustration/bubblegum-girl.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies tristique nulla et mattis. Phasellus id massa eget nisl congue blandit sit amet id ligula. Praesent et nulla eu augue tempus sagittis. Mauris faucibus nibh et nibh cursus in vestibulum sapien egestas. Curabitur ut lectus tortor. Sed ipsum eros, egestas ut eleifend non, elementum vitae eros. Mauris felis diam, pellentesque vel lacinia ac, dictum a nunc. Mauris mattis nunc sed mi sagittis et facilisis tortor volutpat. Etiam tincidunt urna mattis erat placerat placerat ac eu tellus. Ut nec velit id nisl tincidunt vehicula id a metus. Pellentesque erat neque, faucibus id ultricies vel, mattis in ante. Donec lobortis, mauris id congue scelerisque, diam nisl accumsan orci, condimentum porta est magna vel arcu. Curabitur varius ante dui. Vivamus sit amet ante ac diam ullamcorper sodales sed a odio.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies tristique nulla et mattis. Phasellus id massa eget nisl congue blandit sit amet id ligula. Praesent et nulla eu augue tempus sagittis. Mauris faucibus nibh et nibh cursus in vestibulum sapien egestas. Curabitur ut lectus tortor. Sed ipsum eros, egestas ut eleifend non, elementum vitae eros. Mauris felis diam, pellentesque vel lacinia ac, dictum a nunc. Mauris mattis nunc sed mi sagittis et facilisis tortor volutpat. Etiam tincidunt urna mattis erat placerat placerat ac eu tellus. Ut nec velit id nisl tincidunt vehicula id a metus. Pellentesque erat neque, faucibus id ultricies vel, mattis in ante. Donec lobortis, mauris id congue scelerisque, diam nisl accumsan orci, condimentum porta est magna vel arcu. Curabitur varius ante dui. Vivamus sit amet ante ac diam ullamcorper sodales sed a odio.
+This illustration served as the artwork for a promotional poster of a 90's themed party.

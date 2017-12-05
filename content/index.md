@@ -1,5 +1,5 @@
 ---
-Title: Index
+Title: Claus
 ---
 
 This page should redirect to /portfolio/

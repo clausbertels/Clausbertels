@@ -30,8 +30,13 @@ nav a:link, nav a:visited {
   opacity: 0.4;
 }
 
+@media screen and (max-width: 667px) {
+  nav a:link, nav a:visited {
+    opacity: 0.6;
+  }
+}
+
 nav a:focus {
-  outline: 1px dashed black;
 }
 
 nav a:hover {
@@ -45,8 +50,11 @@ nav a:active {
 
 nav a.active {
   opacity: 1;
-  cursor: text;
 }
+
+nav .social {
+    align-items: center;
+  }
 
 /**************************************************** SMALL SCREEN SPECIFIC */
 @media screen and (max-width: 667px) {
@@ -87,12 +95,24 @@ nav a.active {
   nav .categories li a {
     color: white;
   }  
+
+  nav .social {
+    padding: 10px 0;
+    background: black;
+    justify-content: space-evenly;
+  }
+
+  nav .social svg {
+    fill: white;
+    height: 32px;
+  }
+
 }
 
 /**************************************************** LARGE SCREEN SPECIFIC */
 @media screen and (min-width: 667px) {
   nav {
-    padding: 0 1vw;
+    padding: 0 .8vw;
   }
 
   nav ul {
@@ -111,5 +131,11 @@ nav a.active {
   nav li, nav a {
     padding: 1em .5vw;
   }
+
+  nav .social svg {
+    fill: black;
+    height: 1.2rem;
+  }
+
 
 }

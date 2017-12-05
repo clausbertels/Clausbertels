@@ -1,12 +1,34 @@
 ---
 template: about
 title: About me
-contact: 
- - Mail: ["claus.bertels@gmail.com", gmail.svg]
- - Instagram: ["www.instagram.com/clausbertels/", instagram.svg]
+social: 
+ - link: claus.bertels@gmail.com
+   icon: gmail.svg
+ - link: http://www.instagram.com/clausbertels/
+   icon: instagram.svg
+ - link: http://www.linkedin.com/in/claus-bertels-05231b60
+   icon: linkedin.svg
+typora-root-url: ../../../clausbertels3
 ---
 
-##Hello! Testing out how long titles' line-height will work.
+# Hello
 
-dolor sit amet, consectetur adipiscing elit. Donec ultricies tristique nulla et mattis. Phasellus id massa eget nisl congue blandit sit amet id ligula. Praesent et nulla eu augue tempus sagittis. Mauris faucibus nibh et nibh cursus in vestibulum sapien egestas. Curabitur ut lectus tortor. Sed ipsum eros, egestas ut eleifend non, elementum vitae eros. Mauris felis diam, pellentesque vel lacinia ac, dictum a nunc. Mauris mattis nunc sed mi sagittis et facilisis tortor volutpat. Etiam tincidunt urna mattis erat placerat placerat ac eu tellus. Ut nec velit id nisl tincidunt vehicula id a metus. Pellentesque erat neque, faucibus id ultricies vel, mattis in ante. Donec lobortis, mauris id congue scelerisque, diam nisl accumsan orci, condimentum porta est magna vel arcu. Curabitur varius ante dui. Vivamus sit amet ante ac diam ullamcorper sodales sed a odio.
+My name is Claus Bertels. I'm a student in **Product Development** at the University of Antwerp. These studies are industrially focused, but my love for design carries over to other fields. Second to commercial, **physical products**, I like working on **digital** and **d.i.y. design** projects. 
+
+When I'm not designing, you might find me swimming, gaming, playing the drums, discovering great new music or generally learning about new exciting topics. 
+
+##Contact
+
+I love meeting new people and hearing about your projects. Try messaging [my inbox], [my Instagram], or [LinkedIn].
+
+[my inbox]: mailto:claus.bertels@gmail.com	"Mail me"
+[my Instagram]: http://www.instagram.com/clausbertels/	"My Instagram profile"
+[LinkedIn]: http://www.linkedin.com/in/claus-bertels-05231b60	"My LinkedIn profile"
+
+
+
+
+
+
+
 

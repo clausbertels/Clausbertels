@@ -12,6 +12,17 @@
 {% if meta.category|lower|replace({' ':''}) in p.id %}
 
 
+{% if meta.category == "All" %}
+	<figcaption>
+	  <ul>
+	    <li>{{ p.meta.category }}</li> 
+	    <li>{{ p.meta.date }}</li>
+	    <li>In collaboration with <em>Theresa Vermeulen</em></li>
+	    <li>Client: <em>Danesh Smith</em></li>
+	  </ul>
+	</figcaption>
+{% endif %} 
+
 //////// CSS
 .grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))

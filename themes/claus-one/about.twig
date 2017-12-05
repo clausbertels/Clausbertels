@@ -2,19 +2,37 @@
 
 
 {% block styles %}
-  <link rel="stylesheet" href="{{ theme_url }}/about.css" type="text/css" />
+  <link rel="stylesheet" href="{{ theme_url }}/page.css" type="text/css" />
+  <style type="text/css">
+    img.profile {
+      float: left;
+      margin: 0 1rem 8vh 0;
+      width: 20vw;
+      position: initial;
+      transform: translateX(0);
+    }
+
+    @media screen and (max-width: 667px) {
+      img.profile {display: none;}
+    }
+  </style>
 {% endblock %}
 
 
 {% block mainnav %}
   <ul class="main">
-    <li><a class="active" data-hover="Claus">Claus</a></li>
-    <li><a href="/portfolio/" data-hover="Portfolio">Portfolio</a></li>
+    <li><a class="active">Claus</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
   </ul>
 {% endblock %}
 
 
 {% block subnav %}
+	<ul class="social">
+		{% for i in meta.social %}
+			<li><a href="{% if "@" in i.link %}mailto:{% endif%}{{ i.link }}" {% if "http" in i.link %}target="_blank"{% endif%}>{{ source('/icons/' ~ i.icon) }}</a></li>
+		{% endfor %}
+	</ul>
 {% endblock %}
 
 
