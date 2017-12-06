@@ -1,6 +1,7 @@
 /***************************************************** UNIVERSAL */
 nav {
   margin: 0 auto;
+
 }
 
 nav, nav > ul {
@@ -12,12 +13,8 @@ nav ul, nav li {
 }
 
 nav .main {
-  font-family: var(--default-slab);
-  font-weight: 700;
-}
-
-nav .categories {
-  font-family: var(--default-sans);
+  /*font-family: var(--default-slab);*/
+  font-weight: 900;
 }
 
 nav a {

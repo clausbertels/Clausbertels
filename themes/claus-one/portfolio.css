@@ -29,7 +29,7 @@ h1, h2 {
 .project figcaption {
   grid-area: 1 / 1 / -1 / -1 ;
   z-index: 1;
-  font: 700 1.2rem var(--default-slab);
+  font: 900 1.2rem var(--default-sans);
   text-shadow: 0 0 9px rgba(0,0,0,.5);
   color: white;
   overflow-wrap: break-spaces;
@@ -41,7 +41,7 @@ h1, h2 {
 }
 
 .project figcaption h2 {
-  font: 400 .8rem var(--default-slab);
+  font: 400 .8rem var(--default-sans);
   margin-top: .5em;
 }
 
@@ -92,18 +92,20 @@ h1, h2 {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%; width: 100%;
+  will-change: transform, opacity;
   transform: translate3d(0,0,0);
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
   opacity: 1; 
-  filter: blur(20px);
+  filter: blur(10px);
   transition: opacity 100ms var(--smooth-in), 
               transform 300ms var(--smooth-out), 
-              filter 200ms; 
+              filter 125ms; 
 }
 
 .project:hover img {
-  transition: opacity 180ms var(--smooth-out), transform 1650ms var(--smooth-out); 
+  will-change: transform, opacity;
+  transition: opacity 180ms var(--smooth-out), transform 300ms var(--smooth-out); 
   transform: translate3d(0,0,0);
   -webkit-transform: scale(1.01);
           transform: scale(1.01);

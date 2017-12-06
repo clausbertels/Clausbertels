@@ -10,7 +10,7 @@ Date: 21 may 2017
 
 Near the end of my internship at [Lixpen], I had the chance to design **a packaging concept** for the upcoming [Watt], a watch and external battery for the [Lix].
 
-![watt-packaging-1](../../../assets/productdesign/watt-packaging-1.jpg)
+![](../../../assets/productdesign/watt-packaging-1.jpg)
 
 ![watt-packaging-4](../../../assets/productdesign/watt-packaging-4.jpg)
 

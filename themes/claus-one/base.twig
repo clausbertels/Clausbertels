@@ -39,6 +39,11 @@
 
     *, *:before, *:after {
       box-sizing: inherit;
+      font-family: var(--default-sans);
+    }
+
+    body {
+      background: #f7f9f9;
     }
 
     body, ul, li, a, div,
@@ -62,7 +67,7 @@
       margin: 0 auto;
       padding: 2vw;
       text-align: center;
-      font: 400 .7rem var(--default-slab);
+      font: 400 .7rem var(--default-sans);
       color: rgba(0,0,0,.2);
     }
   </style>
@@ -82,6 +87,9 @@
           function(img) {
             img.onerror = function() {this.style.visibility='hidden';};
             img.onload = function() {this.style.filter = "blur(0)";};
+            if (img.complete) {
+              img.style.filter = "blur(0)";
+            };
           }
         )
       }

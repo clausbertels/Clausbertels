@@ -10,7 +10,7 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-##By students, for students.
+##By students for students.
 
 *%meta.title%* is a non-profit undertaking founded by the masters' students of Product Development at the University of Antwerp, Belgium. Their goal is to provide all students, and occasionally professors and alumni, within their faculty, with events to enrich their years at the school. The types of these events range from club parties to networking nights and "cheap-lunch" days.
 
