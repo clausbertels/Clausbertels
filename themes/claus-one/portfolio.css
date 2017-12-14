@@ -8,7 +8,6 @@
 .project { /* anchor element */
   padding: unset;
   text-decoration: none;
-  background-color: black;
   height: 60vh;
 }
 
@@ -70,7 +69,7 @@ h1, h2 {
 /* LARGE SCREEN SPECIFIC */
 @media screen and (min-width: 667px) {
   .grid {
-    grid-gap: 4px;
+    grid-gap: 3px;
   }
 
   .project figcaption {
@@ -92,20 +91,18 @@ h1, h2 {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%; width: 100%;
-  will-change: transform, opacity;
-  transform: translate3d(0,0,0);
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  will-change: transform, opacity, filter;
+  -webkit-transform: translate3d(0,0,0) scale(1.04);
+          transform: translate3d(0,0,0) scale(1.04);
   opacity: 1; 
-  filter: blur(10px);
   transition: opacity 100ms var(--smooth-in), 
-              transform 300ms var(--smooth-out), 
+              transform 120ms var(--smooth-out), 
               filter 125ms; 
 }
 
 .project:hover img {
   will-change: transform, opacity;
-  transition: opacity 180ms var(--smooth-out), transform 300ms var(--smooth-out); 
+  transition: opacity 180ms var(--smooth-out), transform 120ms var(--smooth-out); 
   transform: translate3d(0,0,0);
   -webkit-transform: scale(1.01);
           transform: scale(1.01);

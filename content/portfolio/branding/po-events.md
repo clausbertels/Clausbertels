@@ -22,7 +22,7 @@ As lead of print and digital media, I thought the old logo could use a refresh.
 
 We envisioned a logo that could double as a label. It had to be something that felt like it could be easily used as an ink stamp or a sticker to depict the quality of the event. It had to be visible from a distance to catch your eye on promotional posters and social media pictures.
 
-After a couple of iterations we settled on a blocky, fat design.
+After a couple of iterations we settled on a blocky, bold design.
 
 <img src="/assets/branding/poe-logo.svg" class="noresize" title="old logo" width="20%">
 

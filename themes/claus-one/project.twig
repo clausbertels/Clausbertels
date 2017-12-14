@@ -7,6 +7,27 @@
 
 
 {% block javascript %}
+  <script> 
+    // Bug in Safari: no image repaint after resetting width
+    // document.addEventListener(
+    //   "DOMContentLoaded", function(event) {
+    //     document.querySelectorAll('img').forEach(
+    //       function(img) {
+    //         img.style.cursor = 'pointer';
+    //         var x = window.getComputedStyle(img).getPropertyValue('width');
+    //         img.onclick = function() {
+    //           if (this.style.width != '100vw') {
+    //             this.style.width = '100vw';
+    //           }
+    //           else {
+    //             this.style.width = x;
+    //           };
+    //         };
+    //       }
+    //     )
+    //   }
+    // );
+  </script>
 {% endblock %}
 
 {% block mainnav %}
@@ -20,16 +41,16 @@
 
 
 {% block content %}
-  <section class="content">
+  <main class="content">
   	<p>
   		<script>
     		document.write('<a href="' + document.referrer + '">← Go Back</a>');
 			</script>
 		</p>
 		<p class="meta">
-      {{ meta.date_formatted }}<br />
+      <time>{{ meta.date_formatted }}</time><br />
       {% if meta.collab %} In collaboration with: <em>{{ meta.collab }}</em>.{% endif %}
     </p>
     {{ content }}
-  </section>
+  </main>
 {% endblock %}

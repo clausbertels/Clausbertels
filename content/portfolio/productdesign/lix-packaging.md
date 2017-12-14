@@ -12,9 +12,9 @@ Near the end of my internship at [Lixpen], I had the chance to design **a packag
 
 ![](../../../assets/productdesign/watt-packaging-1.jpg)
 
-![watt-packaging-4](../../../assets/productdesign/watt-packaging-4.jpg)
-
 ![watt-packaging-2](../../../assets/productdesign/watt-packaging-2.jpg)
+
+![watt-packaging-4](../../../assets/productdesign/watt-packaging-4.jpg)
 
 ![watt-packaging-3](../../../assets/productdesign/watt-packaging-3.jpg)
 

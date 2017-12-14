@@ -8,6 +8,34 @@
 
 {% block styles %}
   <link rel="stylesheet" href="{{ theme_url }}/portfolio.css" type="text/css" />
+  <style>
+
+  </style>
+{% endblock %}
+
+
+{% block javascript %}
+  <script>
+    var scrollPos = window.scrollY;
+    window.addEventListener("load", function(e) {
+      var imgs = Array.from(document.images);
+      var foldImgs = Array.from(document.images);
+      for (var i=0; i<imgs.length; i++) {
+        var imgTop = imgs[i].getBoundingClientRect().top + scrollPos;
+        var imgBot = imgs[i].getBoundingClientRect().bottom + scrollPos;
+        if(imgs[i].getAttribute('data-src') && imgTop <= window.innerHeight && imgBot > 0) { // if img is in vp
+          imgs[i].setAttribute('src',imgs[i].getAttribute('data-src')); // set src
+          imgs[i].removeAttribute('data-src'); // delete data-src
+          // foldImgs.splice(i, 1);
+        } 
+      }
+      for (var i=0; i<imgs.length; i++) {
+        if(imgs[i].getAttribute('data-src')) {
+          imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
+        }
+      }
+    });
+  </script>
 {% endblock %}
 
 
@@ -33,7 +61,7 @@
 
 
 {% block content %}
-<main class="grid"> 
+<main class="grid">
   {# LOOP PROJECTS #}
   {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
     <a href="{{ p.id|link }}" class="project">
@@ -41,7 +69,7 @@
         {% if p.meta.coverimg %}
           {% set current_dir = "/assets/" ~ p.meta.category|replace({' ':''})|lower ~ "/" %}
         <img 
-          src="{{ current_dir ~ p.meta.coverimg }}" 
+          data-src="{{ current_dir ~ p.meta.coverimg }}" 
           {# src="{{ current_dir ~ p.meta.coverimg|replace({'.jpg':'.svg'})|replace({'.png':'.svg'}) }}"  #}
           alt="" />
         {% endif %}
