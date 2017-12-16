@@ -1,7 +1,7 @@
 ---
 template: portfolio
 title: Portfolio
-category: "All"
+category: All
 pos: 1
 index: true
 ---

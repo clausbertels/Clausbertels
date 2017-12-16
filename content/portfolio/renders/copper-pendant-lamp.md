@@ -9,4 +9,4 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-![copper-pendant-lamp-cover](/assets/renders/copper-pendant-lamp-cover.jpg)
+<img src="/assets/renders/copper-pendant-lamp-cover.jpg">

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 
   <title>
-    {{ site_title }} {% if current_page.title %}| {{ current_page.title }}{% endif %}
+    {% if current_page.title %}{{ current_page.title }} | {% endif %}{{ site_title }}
   </title>
 
   <meta name="viewport" content="initial-scale=1" />
@@ -46,6 +46,7 @@
       background: #f7f9f9;
       perspective: 380px;
       perspective-origin: center 100px;
+      font-weight: 300;
     }
 
     body, ul, li, a, div,

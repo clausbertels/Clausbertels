@@ -1,14 +1,23 @@
 .content {
-	font-family: var(--default-sans);
+	/*background: lightpink;*/
+	padding-top: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6, 
+p, .content img:not(.wide) {
+	min-width: 160px;
 	max-width: 900px;
-	padding: 4rem 5vw;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 5vw;
+	display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-size: unset;
   font-weight: 700, bold;
-  margin: .5em 0;
+  margin-bottom: .5em;
+  margin-top: .5em;
 }
 
 h1 {
@@ -58,14 +67,16 @@ p.meta {
 }
 
 .content img {
-	min-width: 160px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
 	margin-bottom: 1rem;
+	padding: unset;
 }
 
 .content img:not([width]) {
 	width: 100%;
+}
+
+.content img.wide {
+	max-width: unset;
+	width: 100vw;
 }
 

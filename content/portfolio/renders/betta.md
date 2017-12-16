@@ -9,6 +9,6 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-![betta1](/assets/renders/betta1.jpg)
+<img src="/assets/renders/betta1.jpg">
 
-![betta2](/assets/renders/betta2.jpg)
+<img src="/assets/renders/betta2.jpg">
