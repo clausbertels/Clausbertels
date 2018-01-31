@@ -5,7 +5,6 @@
 
 h1, h2, h3, h4, h5, h6, 
 p, .content img:not(.wide) {
-	min-width: 160px;
 	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
@@ -67,8 +66,12 @@ p.meta {
 }
 
 .content img {
+	display: block;
 	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
 	padding: unset;
+	min-width: 350px;
 }
 
 .content img:not([width]) {
@@ -76,7 +79,7 @@ p.meta {
 }
 
 .content img.wide {
-	max-width: unset;
 	width: 100vw;
+	max-width: 1680px;
 }
 

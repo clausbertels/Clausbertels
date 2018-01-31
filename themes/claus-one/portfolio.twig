@@ -15,6 +15,7 @@
 
 
 {% block javascript %}
+	{#
   <script>
     var scrollPos = window.scrollY;
     window.addEventListener("load", function(e) {
@@ -36,6 +37,7 @@
       }
     });
   </script>
+	#}
 {% endblock %}
 
 
@@ -69,13 +71,15 @@
         {% if p.meta.coverimg %}
           {% set current_dir = "/assets/" ~ p.meta.category|replace({' ':''})|lower ~ "/" %}
         <img 
-          data-src="{{ current_dir ~ p.meta.coverimg }}" 
+          src="{{ current_dir ~ p.meta.coverimg }}" {# Change to data-source when using lazy-loader #}
           {# src="{{ current_dir ~ p.meta.coverimg|replace({'.jpg':'.svg'})|replace({'.png':'.svg'}) }}"  #}
           alt="" />
         {% endif %}
         <figcaption>
           <h1>{{ p.title }}</h1>
-          {% if meta.category == "All" %}<h2>{{ p.meta.category }}</h2>{% endif %}
+          {# {% if meta.category == "All" %} #}
+          	<h2>{{ p.meta.date|date("F Y") }} — {{ p.meta.category }}</h2>
+          {# {% endif %} #}
         </figcaption>
       </figure>
     </a>

@@ -1,7 +1,11 @@
 /***************************************************** UNIVERSAL */
 nav {
   margin: 0 auto;
+}
 
+nav *::selection {
+  background: rgba(0,0,0,0);
+  color: indianred;
 }
 
 nav, nav > ul {
@@ -110,6 +114,7 @@ nav .social {
 @media screen and (min-width: 667px) {
   nav {
     padding: 0 .8vw;
+    align-items: center;
   }
 
   nav ul {
@@ -118,10 +123,10 @@ nav .social {
   nav .main {
     flex-grow: 1;
     font-size: 1.2rem;
+    padding-right: 2vw;
   }
 
-  nav .categories {
-    align-items: center;
+  nav .categories, nav .social {
     font-size: .9rem;
   }
 

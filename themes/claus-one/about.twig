@@ -28,9 +28,14 @@
 
 
 {% block subnav %}
-	<ul class="social">
+{# 	<ul class="social">
 		{% for i in meta.social %}
 			<li><a href="{% if "@" in i.link %}mailto:{% endif%}{{ i.link }}" {% if "http" in i.link %}target="_blank"{% endif%}>{{ source('/icons/' ~ i.icon) }}</a></li>
+		{% endfor %}
+	</ul> #}
+		<ul class="social">
+		{% for i in meta.social %}
+			<li><a href="{% if "@" in i.link %}mailto:{% endif%}{{ i.link }}" {% if "http" in i.link %}target="_blank"{% endif%}>{{ i.name }}</a></li>
 		{% endfor %}
 	</ul>
 {% endblock %}

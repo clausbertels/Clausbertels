@@ -2,11 +2,14 @@
 template: about
 title: About me
 social: 
- - link: claus.bertels@gmail.com
+ - name: Mail
+   link: claus.bertels@gmail.com
    icon: gmail.svg
- - link: http://www.instagram.com/clausbertels/
+ - name: Instagram
+   link: http://www.instagram.com/clausbertels/
    icon: instagram.svg
- - link: http://www.linkedin.com/in/claus-bertels-05231b60
+ - name: LinkedIn
+   link: http://www.linkedin.com/in/clausbertels/
    icon: linkedin.svg
 typora-root-url: ../../../clausbertels3
 ---
@@ -23,7 +26,7 @@ I love meeting new people and hearing about your projects. Try messaging [my inb
 
 [my inbox]: mailto:claus.bertels@gmail.com	"Mail me"
 [my Instagram]: http://www.instagram.com/clausbertels/	"My Instagram profile"
-[LinkedIn]: http://www.linkedin.com/in/claus-bertels-05231b60	"My LinkedIn profile"
+[LinkedIn]: http://www.linkedin.com/in/clausbertels "My LinkedIn profile"
 
 
 
