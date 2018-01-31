@@ -9,6 +9,6 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-<img src="/assets/illustration/bubblegum-girl.jpg">
+![bubblegum-girl](/assets/illustration/bubblegum-girl.jpg)
 
 This illustration served as the artwork for a promotional poster of a 90's themed party.

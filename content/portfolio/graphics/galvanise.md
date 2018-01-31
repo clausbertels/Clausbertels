@@ -9,4 +9,4 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-<img src="/assets/renders/galvanise.jpg">
+![galvanise-cover](/assets/renders/galvanise.jpg)

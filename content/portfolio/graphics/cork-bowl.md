@@ -9,4 +9,4 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-<img src="/assets/renders/cork-bowl-cover.jpg">
+![cork-bowl-cover](/assets/renders/cork-bowl-cover.jpg)

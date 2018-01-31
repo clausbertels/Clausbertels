@@ -7,14 +7,18 @@ Date: 28 may 2017
 typora-root-url: ../../../../clausbertels3
 ---
 
+<<<<<<< HEAD:content/portfolio/products/luca-bowl-mould.md
 # %meta.title%
 
 This mould serves as a concrete pouring container to produce [a variety of beautiful bowls](http://lucabeel.com/luca-beel-luca-bowl.html) designed by Luca Beel.
 
 <img src="/assets/diy/luca-bowl-mould-4.jpg">
+=======
+![luca-bowl-mould-4](/assets/diy/luca-bowl-mould-4.jpg)
+>>>>>>> parent of 1a025dc... content:content/portfolio/diy/luca-bowl-mould.md
 
-<img src="/assets/diy/luca-bowl-mould-3.jpg">
+![luca-bowl-mould-3](/assets/diy/luca-bowl-mould-3.jpg)
 
-<img src="/assets/diy/luca-bowl-mould-2.jpg">
+![luca-bowl-mould-2](/assets/diy/luca-bowl-mould-2.jpg)
 
-<img src="/assets/diy/luca-bowl-mould-1.jpg">
+![luca-bowl-mould-1](/assets/diy/luca-bowl-mould-1.jpg)

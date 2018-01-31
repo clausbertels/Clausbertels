@@ -9,4 +9,4 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-<img src="/assets/illustration/space-owl.png">
+![space-owl](/assets/illustration/space-owl.png)
