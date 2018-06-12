@@ -7,7 +7,7 @@ Date: 13 february 2017
 typora-root-url: ../../../../clausbertels3
 ---
 
-## %meta.title%
+# %meta.title%
 
 <img src="/assets/sketches/car1.jpg">
 

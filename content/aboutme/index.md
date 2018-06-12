@@ -20,17 +20,37 @@ My name is Claus Bertels. I'm a student in **Product Development** at the Univer
 
 When I'm not designing, you might find me swimming, gaming, playing the drums, discovering great new music or generally learning about new exciting topics. 
 
-##Contact
+## Contact
 
-I love meeting new people and hearing about your projects. Try messaging [my inbox], [my Instagram], or [LinkedIn].
+I love meeting new people and hearing about your projects. <br />Try messaging [my inbox], [my Instagram], or [LinkedIn].
 
 [my inbox]: mailto:claus.bertels@gmail.com	"Mail me"
 [my Instagram]: http://www.instagram.com/clausbertels/	"My Instagram profile"
 [LinkedIn]: http://www.linkedin.com/in/clausbertels "My LinkedIn profile"
 
+# Curriculum
 
+## Work
 
+April - May 2017: Design intern at [Lixpen], Brussels.
 
+September 2016 - July 2017: Art director at [PO events], Antwerp.
+
+[Lixpen]: https://www.lixpen.com "Lixpen"
+
+[PO events]: /portfolio/graphics/po-events "PO events"
+
+## Student jobs
+
+December 2017: Barista at [Vangrootloon], Hasselt.
+
+July 2017: Salesman at [Fiets!], Antwerp.
+
+August 2011 & 2012: Warehouse worker at [Carglass], Hasselt.
+
+[Vangrootloon]: https://www.vangrootloon.com "Vangrootloon"
+[Fiets!]: https://www.fiets.be "Fiets!"
+[Carglass]: https://www.carglass.be "Carglass"
 
 
 

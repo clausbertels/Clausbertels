@@ -9,4 +9,4 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-![mic-cover](/assets/renders/mic-cover.jpg)
+<img src="/assets/renders/mic-cover.jpg">

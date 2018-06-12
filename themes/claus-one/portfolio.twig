@@ -65,7 +65,7 @@
 {% block content %}
 <main class="grid">
   {# LOOP PROJECTS #}
-  {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id %}
+  {% for p in pages|only(current_page.id|replace({'/index': ''})) if "index" not in p.id and not p.meta.private %}
     <a href="{{ p.id|link }}" class="project">
       <figure>
         {% if p.meta.coverimg %}

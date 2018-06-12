@@ -3,7 +3,7 @@ Template: project
 Title: Solar wax melter
 Category: Product design
 Coverimg: solar-wax-melter-cover.jpg
-Date: 26 may 2015
+Date: 26 may 2016
 typora-root-url: ../../../../clausbertels3
 ---
 

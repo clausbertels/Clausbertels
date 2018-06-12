@@ -1,46 +1,55 @@
 .content {
-<<<<<<< HEAD
 	/*background: lightpink;*/
 	padding-top: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6, 
 p, .content img:not(.wide) {
-=======
-	font-family: var(--default-sans);
->>>>>>> parent of 1a025dc... content
-	max-width: 900px;
-	padding: 4rem 5vw;
-	margin: 0 auto;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 5vw;
+	display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-size: unset;
-  font-weight: 700, bold;
-  margin: .5em 0;
+	font-weight: 600;
+	margin-top: 1.6em;
+}
+
+h1:first-of-type {
+	margin-top: unset;
 }
 
 h1 {
 	font-size: 2rem;
+	font-weight: 900;
+	margin-bottom: 1.4rem;
 }
 
 h2 {
 	font-size: 1.4rem;
+	margin-bottom: 1rem;
 }
 
-h1:first-of-type {
-	margin-top: 0;
+h1+h2 {
+	margin-top: -.4rem;
 }
 
 p {
 	font-size: 1rem;
-	font-weight: 400, normal;
-	line-height: 1.4;
-	margin-bottom: 1.2em;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 1.4rem;
 }
 
 p.meta {
-	font-size: .8em;
+	font-size: .8rem;
+}
+
+strong, b {
+	font-weight: 600;
 }
 
 .content a {
@@ -66,32 +75,29 @@ p.meta {
   opacity: 0.2;
 }
 
-.content img {
-<<<<<<< HEAD
+.content img, .content video {
 	display: block;
 	margin-bottom: 1rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding: unset;
 	min-width: 350px;
-=======
-	min-width: 160px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-bottom: 1rem;
->>>>>>> parent of 1a025dc... content
+}
+
+.content video {
+	max-height: 80vh;
 }
 
 .content img:not([width]) {
 	width: 100%;
 }
 
-<<<<<<< HEAD
+.content img[width] {
+	margin-bottom: 1.2em;	
+}
+
 .content img.wide {
 	width: 100vw;
 	max-width: 1680px;
 }
 
-=======
->>>>>>> parent of 1a025dc... content

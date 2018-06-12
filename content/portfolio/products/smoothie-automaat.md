@@ -9,8 +9,10 @@ typora-root-url: ../../../../clausbertels3
 
 # %meta.title%
 
-## A product concept for Frulego
+## A product concept for [Alberts].
 
 The vending machine prepares your smoothies on the spot. Using quick-frozen fruits, it's smoothies are about as **fresh** as you can get from a machine. There's no added sugars or preservatives either, keeping your drinks as **healthy** as possible.
 
 <img src="/assets/productdesign/smoothie-automaat-cover.jpg" />
+
+[Alberts]: www.alberts.be "Alberts"

@@ -48,7 +48,7 @@
 			</script>
 		</p>
 		<p class="meta">
-      <time>{{ meta.date|date("F Y") }}</time><br /> {# http://be2.php.net/manual/en/function.date.php #}
+      <time>{{ meta.date|date("F Y") }}</time> {% if meta.category %} – {{ meta.category }} {% endif %}<br /> {# http://be2.php.net/manual/en/function.date.php #}
       {% if meta.collab %} In collaboration with: <em>{{ meta.collab }}</em>.{% endif %}
     </p>
     {{ content }}
