@@ -3,6 +3,7 @@
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: var(--gap);
 }
 
 .project { /* anchor element */
@@ -21,28 +22,30 @@
 h1, h2 {
   font-size: unset;
   font-weight: unset;
-  /*  position: sticky;
-  position: -webkit-sticky;
-  top: 0;*/ /* It was all a dream. */
 }
 
 .project figcaption {
   grid-area: 1 / 1 / -1 / -1 ;
   z-index: 1;
-  font: 900 1.2rem var(--default-sans);
-  text-shadow: 0 0 9px rgba(0,0,0,.5);
+  text-shadow: 0 0 55px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.38);
   color: white;
   overflow-wrap: break-spaces;
   word-wrap: break-spaces;
-  padding: 1.3em 1.8vw;
+  padding-left: 2em;
+  padding-right: 2em;
   opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   transition: opacity 80ms, transform 140ms initial 1s;
   transition-timing-function: var(--smooth-out);
 }
 
-.project figcaption h2 {
-  font: 400 .8rem var(--default-sans);
-  margin-top: .5em;
+.project figcaption h1 {
+  font: 400 3.5rem "Prata", Didot, serif;
+  padding-bottom: 1em;
+  /*line-height: 1;*/
 }
 
 /* SMALL SCREEN SPECIFIC */
@@ -58,7 +61,7 @@ h1, h2 {
     
   .project figcaption h1 {
     padding-left: 4vw;
-    font-size: 9vw;
+    font-size: 11vw;
   }
 
   .project figcaption h2 {
@@ -69,12 +72,8 @@ h1, h2 {
 
 /* LARGE SCREEN SPECIFIC */
 @media screen and (min-width: 667px) {
-  .grid {
-    grid-gap: 3px;
-  }
 
   .project figcaption {
-    -webkit-transform-origin: 18% 9%;
     transform: scale(0.6);
   }
 
@@ -82,6 +81,12 @@ h1, h2 {
     transform: scale(1);
     opacity: 1;
     transition: opacity 140ms, transform 80ms;
+    transition-timing-function: var(--smooth-in);
+  }
+
+  .project:active figcaption {
+    transform: scale(.9);
+    transition: transform 80ms;
     transition-timing-function: var(--smooth-in);
   }
 }

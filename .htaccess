@@ -27,7 +27,7 @@
 
     RewriteCond %{HTTP_HOST} claus\.design [NC]
     RewriteCond %{REQUEST_URI} ^/$
-    RewriteRule ^(.*)$ /portfolio/products/$1 [L]
+    RewriteRule ^(.*)$ /products/$1 [L]
 
     <IfModule mod_env.c>
         SetEnv PICO_URL_REWRITING 1

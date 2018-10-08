@@ -1,6 +1,7 @@
 ---
 template: about
-title: About me
+title: Claus
+category: aboutme
 social: 
  - name: Mail
    link: claus.bertels@gmail.com
@@ -11,14 +12,18 @@ social:
  - name: LinkedIn
    link: http://www.linkedin.com/in/clausbertels/
    icon: linkedin.svg
+pos: 1
+index: true
 typora-root-url: ../../../clausbertels3
 ---
 
 # Hello
 
-My name is Claus Bertels. I'm a student in **Product Development** at the University of Antwerp. These studies are industrially focused, but my love for design carries over to other fields. Second to commercial, **physical products**, I like working on **digital** and **d.i.y. design** projects. 
+## My name is Claus Bertels. 
 
-When I'm not designing, you might find me swimming, gaming, playing the drums, discovering great new music or generally learning about new exciting topics. 
+I recently graduated in Product Development at the University of Antwerp. My schooling may be industrially focused, but my love for design carries over to other fields. Second to consumer and industrial products, I like working on digital and d.i.y. design projects. 
+
+When I'm not designing, you might find me doing laps in the pool, playing the drums, discovering great new music or generally learning about new exciting topics. 
 
 ## Contact
 
@@ -28,29 +33,46 @@ I love meeting new people and hearing about your projects. <br />Try messaging [
 [my Instagram]: http://www.instagram.com/clausbertels/	"My Instagram profile"
 [LinkedIn]: http://www.linkedin.com/in/clausbertels "My LinkedIn profile"
 
-# Curriculum
+## Experience
 
-## Work
+<time>June → August 2018</time><br />**Design intern** at [Fisheye], Wetteren.
 
-April - May 2017: Design intern at [Lixpen], Brussels.
+<time>April → May 2017</time><br />**Design intern** at [Lixpen], Brussels.
 
-September 2016 - July 2017: Art director at [PO events], Antwerp.
+<time>September 2016 → July 2017</time><br />**Art director** at [PO events], Antwerp.
+
+[PO events]: /graphics/po-events "PO events"
 
 [Lixpen]: https://www.lixpen.com "Lixpen"
 
-[PO events]: /portfolio/graphics/po-events "PO events"
+[Fisheye]: https://www.fisheye.eu "Fisheye"
 
 ## Student jobs
 
-December 2017: Barista at [Vangrootloon], Hasselt.
+<time>September 2018</time><br />**Designer** at [Fisheye], Wetteren.
 
-July 2017: Salesman at [Fiets!], Antwerp.
+<time>December 2017</time><br />**Barista** at [Vangrootloon], Hasselt.
 
-August 2011 & 2012: Warehouse worker at [Carglass], Hasselt.
+<time>July 2017</time><br />**Salesman** at [Fiets!], Antwerp.
+
+<time>August 2011 & 2012</time><br />**Warehouse worker** at [Carglass], Hasselt.
 
 [Vangrootloon]: https://www.vangrootloon.com "Vangrootloon"
 [Fiets!]: https://www.fiets.be "Fiets!"
 [Carglass]: https://www.carglass.be "Carglass"
+
+## Education
+
+<time>September 2013 → July 2018</time><br />
+**BSc Product Development** at the [University of Antwerp].
+
+<time>September 2006 → July 2012</time><br />
+**Maths & Science** at [Virga Jessecollege], Hasselt.<br />
+**Fine Arts** at [SASK], Hasselt.
+
+[University of Antwerp]: https://www.uantwerpen.be "University of Antwerp"
+[Virga Jessecollege]: http://www.virgajessecollege.be "Virga Jessecollege"
+[SASK]: http://sask.kunstencampushasselt.be "Stedelijke Academie voor Schone Kunsten"
 
 
 

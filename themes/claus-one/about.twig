@@ -19,28 +19,6 @@
 {% endblock %}
 
 
-{% block mainnav %}
-  <ul class="main">
-    <li><a class="active">Claus</a></li>
-    <li><a href="/portfolio/products/">Portfolio</a></li>
-  </ul>
-{% endblock %}
-
-
-{% block subnav %}
-{# 	<ul class="social">
-		{% for i in meta.social %}
-			<li><a href="{% if "@" in i.link %}mailto:{% endif%}{{ i.link }}" {% if "http" in i.link %}target="_blank"{% endif%}>{{ source('/icons/' ~ i.icon) }}</a></li>
-		{% endfor %}
-	</ul> #}
-		<ul class="social">
-		{% for i in meta.social %}
-			<li><a href="{% if "@" in i.link %}mailto:{% endif%}{{ i.link }}" {% if "http" in i.link %}target="_blank"{% endif%}>{{ i.name }}</a></li>
-		{% endfor %}
-	</ul>
-{% endblock %}
-
-
 {% block content %}
   <main class="content">
     {{ content }} 

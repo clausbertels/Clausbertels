@@ -41,27 +41,6 @@
 {% endblock %}
 
 
-{% block mainnav %}
-  <ul class="main">
-    <li><a href="/aboutme/"><span>Claus</span></a></li>
-    <li><a class="active"><span>Portfolio</span></a></li>
-  </ul>
-{% endblock %}
-
-
-{% block subnav %}
-  <ul class="categories">
-    {% for p in pages|only('portfolio')|sort_by(['meta','pos']) if p.meta.index %} 
-      <li>
-        <a href="{{ p.id|replace({'index':''})|link }}" {% if meta.category == p.meta.category %}class="active"{% endif %}>
-          {{ p.meta.category }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
-
-
 {% block content %}
 <main class="grid">
   {# LOOP PROJECTS #}
@@ -77,9 +56,8 @@
         {% endif %}
         <figcaption>
           <h1>{{ p.title }}</h1>
-          {# {% if meta.category == "All" %} #}
-          	<h2>{{ p.meta.date|date("F Y") }} — {{ p.meta.category }}</h2>
-          {# {% endif %} #}
+          	{# <h2><time>{{ p.meta.date|date("F Y") }}</time>
+             {% if p.meta.tags %} | {{ p.meta.tags }}{% endif %}</h2> #}
         </figcaption>
       </figure>
     </a>
