@@ -9,7 +9,7 @@
 .project { /* anchor element */
   padding: unset;
   text-decoration: none;
-  height: 60vh;
+  height: 83vh;
   background-color: black;
 }
 
@@ -27,7 +27,8 @@ h1, h2 {
 .project figcaption {
   grid-area: 1 / 1 / -1 / -1 ;
   z-index: 1;
-  text-shadow: 0 0 55px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.38);
+  /*text-shadow: 0 0 55px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.38);*/
+  text-shadow: 0 0 40px rgba(0,0,0,.35);
   color: white;
   overflow-wrap: break-spaces;
   word-wrap: break-spaces;
@@ -43,9 +44,10 @@ h1, h2 {
 }
 
 .project figcaption h1 {
-  font: 400 3.5rem "Prata", Didot, serif;
-  padding-bottom: 1em;
-  /*line-height: 1;*/
+  font: 700 7rem Marvin Visions Big;
+  /*font: 900 7rem var(--default-sans);*/
+  padding-bottom: .5em;
+  line-height: .86;
 }
 
 /* SMALL SCREEN SPECIFIC */

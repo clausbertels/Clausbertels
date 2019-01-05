@@ -34,9 +34,9 @@ h1:first-of-type {
 }
 
 h1 {
-	font: 400 3.5rem "Prata", Didot, serif;
-	margin-bottom: .7rem;
-	/*line-height: .8;*/
+	font: 600 4rem "Marvin Visions Big";
+	line-height: .86;
+	margin-bottom: 1.4rem;
 	transform: translateX(-2px); //optically align
 }
 

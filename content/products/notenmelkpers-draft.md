@@ -32,11 +32,11 @@ The client is a vegan coffeehouse (that sells pies online). In the original brie
 
 <small>soak nuts → pour them in the machine with water → collect milk in large bucket → bottle the milk</small>
 
-I lazily assumed that the bottled milk was the end product. So let's take this process, analyze it and then figure out where to improve, right? I spent a week doing exactly that before a colleague's innocent comment made me realize I didn't have the full picture. What happens to the bottles? After an enlightening interview with the store owners I gained more details about and insight into the full process.
+I lazily assumed that the bottled milk was the end product. So let's take this process, analyze it and then figure out where to improve, right? I spent a week doing exactly that before a colleague's innocent comment made me realize I didn't have the full picture. What happens to the bottles? After an enlightening interview with the store owners I gained more details about- and insight into the full process.
 
 <small>soak nuts → blend ingredients → pour them in the machine → collect milk in large bucket → bottle the milk → refridgerate large stock → refridgerate small stock near bar → use small stock to foam milk in a pitcher and use in drinks</small>
 
-Now that the bar is part of the context, our brainstorm suddenly becomes a lot more interesting. This is the point where I decided on some sort of machine that lives on het aanrecht that delivers fresh nut milk right in the barista's pitcher.
+Now that the bar is part of the context, our brainstorm suddenly becomes a lot more interesting. This is the point where I decided on some sort of machine that lives on the countertop and delivers fresh nut milk right in the barista's pitcher.
 
 
 
